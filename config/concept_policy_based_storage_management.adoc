@@ -1,0 +1,31 @@
+---
+permalink: config/concept_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: slo, storage efficiency policy, storage workloads 
+summary: '정책 기반 스토리지 관리 옵션을 사용하면 서비스 수준 목표(SLO)에 따라 스토리지를 관리할 수 있습니다. 이 옵션은 기본적으로 활성화되어 있습니다.' 
+---
+= 정책 기반 스토리지 관리 활성화
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+*정책 기반 스토리지 관리* 옵션을 사용하면 서비스 수준 목표(SLO)에 따라 스토리지를 관리할 수 있습니다. 이 옵션은 기본적으로 활성화되어 있습니다.
+
+이 기능을 활성화하면 Active IQ Unified Manager 인스턴스에 추가된 ONTAP 클러스터에서 스토리지 워크로드를 프로비저닝하고, 할당된 성능 서비스 수준 및 스토리지 효율성 정책에 따라 이러한 워크로드를 관리할 수 있습니다.
+
+*일반* > *기능 설정* > *정책 기반 저장소 관리*에서 이 기능을 활성화하거나 비활성화할 수 있습니다.  이 기능을 활성화하면 다음 페이지에서 작업 및 모니터링을 할 수 있습니다.
+
+* 프로비저닝(스토리지 워크로드 프로비저닝)
+* *정책* > *성능 서비스 수준*
+* *정책* > *저장 효율성*
+* 클러스터 설정 페이지의 성능 서비스 수준 열에 따라 관리되는 워크로드
+* 대시보드의 작업 부하 성능 패널
+
+
+화면을 사용하여 성능 서비스 수준 및 스토리지 효율성 정책을 만들고 스토리지 작업 부하를 프로비저닝할 수 있습니다.  할당된 성능 서비스 수준을 준수하는 스토리지 작업 부하와 준수하지 않는 작업 부하도 모니터링할 수 있습니다.  워크로드 성능 및 워크로드 IOPS 패널을 사용하면 프로비저닝된 스토리지 워크로드를 기준으로 데이터 센터 전반의 클러스터의 총 용량 및 성능(IOPS), 사용 가능한 용량 및 용량, 사용된 용량 및 성능(IOPS)을 평가할 수도 있습니다.
+
+이 기능을 활성화한 후 Unified Manager REST API를 실행하여 *메뉴 모음* > *도움말 버튼* > *API 문서* > *저장소 공급자* 카테고리에서 일부 기능을 수행할 수 있습니다.  또는 +https://<hostname>/docs/api/+ 형식으로 호스트 이름 또는 IP 주소와 REST API 페이지에 액세스할 URL을 입력할 수 있습니다.
+
+API에 대한 자세한 내용은 다음을 참조하세요.link:../api-automation/concept_get_started_with_um_apis.html["Active IQ Unified Manager REST API 시작하기"] .

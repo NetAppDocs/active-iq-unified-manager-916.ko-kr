@@ -1,0 +1,72 @@
+---
+permalink: api-automation/concept_job_api.html 
+sidebar: sidebar 
+keywords: jobs, view 
+summary: 관리 서버 카테고리의 작업 API를 사용하면 비동기 작업의 실행 세부 정보를 볼 수 있습니다. 
+---
+= 작업 및 시스템 세부 정보 보기
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+당신은 사용할 수 있습니다 `jobs` API는 `management-server` 비동기 작업의 실행 세부 정보를 보려면 카테고리를 선택하세요.  그만큼 `system` API는 `management-server` 카테고리를 사용하면 Active IQ Unified Manager 환경에서 인스턴스 세부 정보를 볼 수 있습니다.
+
+
+
+== 채용공고 보기
+
+Active IQ Unified Manager 에서는 리소스 추가 및 수정과 같은 작업이 동기 및 비동기 API 호출을 통해 수행됩니다.  비동기 실행을 위해 예약된 호출은 해당 호출에 대해 생성된 Job 객체를 통해 추적할 수 있습니다.  각 Job 객체에는 식별을 위한 고유한 키가 있습니다.  각 Job 객체는 사용자가 작업 진행 상황에 접근하고 이를 추적할 수 있도록 Job 객체 URI를 반환합니다.  이 API를 사용하면 각 실행의 세부 정보를 검색할 수 있습니다.
+
+이 API를 사용하면 과거 데이터를 포함하여 데이터 센터의 모든 작업 객체를 쿼리할 수 있습니다.  기본적으로 모든 작업을 쿼리하면 웹 UI 및 API 인터페이스를 통해 트리거된 마지막 20개 작업의 세부 정보가 반환됩니다.  내장된 필터를 사용하여 특정 일자리를 확인하세요.  Job 키를 사용하여 특정 작업의 세부 정보를 쿼리하고 리소스에 대한 다음 작업 세트를 실행할 수도 있습니다.
+
+[cols="4*"]
+|===
+| 범주 | HTTP 동사 | 길 | 설명 
+
+
+ a| 
+관리 서버
+ a| 
+얻다
+ a| 
+`/management-server/jobs`
+ a| 
+모든 직업의 세부 정보를 반환합니다.  정렬 순서가 없으므로 마지막으로 제출된 Job 객체가 맨 위에 반환됩니다.
+
+
+
+ a| 
+관리 서버
+ a| 
+얻다
+ a| 
+`/management-server/jobs/\{key}`
+
+Job 객체의 작업 키를 입력하면 해당 작업의 구체적인 세부 정보를 볼 수 있습니다.
+ a| 
+특정 Job 객체의 세부 정보를 반환합니다.
+
+|===
+
+
+== 시스템 세부 정보 보기
+
+를 사용하여 `/management-server/system` API를 사용하면 Unified Manager 환경의 인스턴스별 세부 정보를 쿼리할 수 있습니다.  API는 시스템에 설치된 Unified Manager 버전, UUID, 공급업체 이름, 호스트 OS, Unified Manager 인스턴스에서 실행되는 서비스의 이름, 설명 및 상태 등 제품 및 서비스에 대한 정보를 반환합니다.
+
+[cols="4*"]
+|===
+| 범주 | HTTP 동사 | 길 | 설명 
+
+
+ a| 
+관리 서버
+ a| 
+얻다
+ a| 
+`/management-server/system`
+ a| 
+이 API를 실행하려면 입력 매개변수가 필요하지 않습니다.  기본적으로 현재 Unified Manager 인스턴스의 시스템 세부 정보가 반환됩니다.
+
+|===

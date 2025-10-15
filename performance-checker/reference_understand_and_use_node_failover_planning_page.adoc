@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/reference_understand_and_use_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: understanding, node, failover, planning page 
+summary: '성능/노드 장애 조치 계획 페이지는 노드의 고가용성(HA) 파트너 노드에 장애가 발생할 경우 노드의 성능에 미치는 영향을 추정합니다.  Unified Manager는 HA 쌍의 노드에 대한 과거 성능을 기반으로 추정치를 계산합니다.' 
+---
+= 노드 장애 조치 계획 페이지를 이해하고 사용하세요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+성능/노드 장애 조치 계획 페이지는 노드의 고가용성(HA) 파트너 노드에 장애가 발생할 경우 노드의 성능에 미치는 영향을 추정합니다.  Unified Manager는 HA 쌍의 노드에 대한 과거 성능을 기반으로 추정치를 계산합니다.
+
+장애 조치의 성능 영향을 예측하면 다음과 같은 시나리오에서 계획을 세우는 데 도움이 됩니다.
+
+* 장애 조치로 인해 인수 노드의 예상 성능이 지속적으로 허용할 수 없는 수준으로 저하되는 경우 장애 조치로 인한 성능 영향을 줄이기 위한 시정 조치를 취하는 것을 고려할 수 있습니다.
+* 하드웨어 유지 관리 작업을 수행하기 위해 수동 장애 조치를 시작하기 전에, 장애 조치가 인수 노드의 성능에 어떤 영향을 미치는지 추정하여 작업을 수행하기에 가장 적합한 시간을 결정할 수 있습니다.
+

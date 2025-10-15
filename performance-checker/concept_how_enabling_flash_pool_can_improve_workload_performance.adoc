@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_how_enabling_flash_pool_can_improve_workload_performance.html 
+sidebar: sidebar 
+keywords: enable, flash pool, storage, aggregate, improve, workload, performance 
+summary: 집계에서 Flash Pool 기능을 활성화하면 워크로드 성능을 개선할 수 있습니다.  플래시 풀은 HDD와 SSD를 모두 통합한 집합체입니다.  HDD는 기본 저장 장치로 사용되고 SSD는 고성능 읽기 및 쓰기 캐시를 제공하여 전체 성능을 향상시킵니다. 
+---
+= 스토리지 집계에서 Flash Pool을 활성화하면 워크로드 성능이 어떻게 향상될 수 있나요?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+집계에서 Flash Pool 기능을 활성화하면 워크로드 성능을 개선할 수 있습니다.  플래시 풀은 HDD와 SSD를 모두 통합한 집합체입니다.  HDD는 기본 저장 장치로 사용되고 SSD는 고성능 읽기 및 쓰기 캐시를 제공하여 전체 성능을 향상시킵니다.
+
+Unified Manager에서 이벤트 세부 정보 페이지에는 경합 중인 집계의 이름이 표시됩니다.  ONTAP 시스템 관리자나 ONTAP 명령을 사용하여 Flash Pool이 집계에 대해 활성화되어 있는지 확인할 수 있습니다.  SSD가 설치되어 있는 경우 명령줄 인터페이스를 사용하여 SSD를 활성화할 수 있습니다.  SSD가 설치되어 있는 경우 집계에서 다음 명령을 실행하여 Flash Pool이 활성화되어 있는지 확인할 수 있습니다. `*cluster::> storage aggregate show -aggregate aggr_name -field hybrid-enabled*`
+
+이 명령에서, `_aggr_name_` 는 경합하는 집계와 같은 집계의 이름입니다.
+
+Flash Pool과 이를 사용하기 위한 요구 사항에 대한 자세한 내용은 _Clustered Data ONTAP 물리적 스토리지 관리 가이드_를 참조하세요.

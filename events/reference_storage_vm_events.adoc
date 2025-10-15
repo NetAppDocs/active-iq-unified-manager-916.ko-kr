@@ -1,0 +1,452 @@
+---
+permalink: events/reference_storage_vm_events.html 
+sidebar: sidebar 
+keywords: storage, vm events, impact area, availability, configuration, performance, security 
+summary: '저장소 VM 이벤트는 저장소 VM(SVM)의 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 해줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다.' 
+---
+= 스토리지 VM 이벤트
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 VM(스토리지 가상 머신, SVM이라고도 함) 이벤트는 스토리지 VM(SVM)의 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 해줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다.
+
+별표(*)는 Unified Manager 이벤트로 변환된 EMS 이벤트를 식별합니다.
+
+
+
+== 영향 영역: 가용성
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+스토리지 VM CIFS 서비스 다운(ocumEvtVserverCifsServiceStatusDown)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+SVM CIFS 서비스가 구성되지 않음(해당 없음)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+
+
+ a| 
+존재하지 않는 CIFS 공유에 연결 시도 *(nbladeCifsNoPrivShare)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+CIFS NetBIOS 이름 충돌 *(nbladeCifsNbNameConflict)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+CIFS 섀도 복사 작업이 실패했습니다. *(cifsShadowCopyFailure)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+많은 CIFS 연결 *(nbladeCifsManyAuths)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+최대 CIFS 연결 수를 초과했습니다. *(nbladeCifsMaxOpenSameFile)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+사용자당 CIFS 연결 최대 수를 초과했습니다. *(nbladeCifsMaxSessPerUsrConn)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+SVM FC/FCoE 서비스 다운(ocumEvtVserverFcServiceStatusDown)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+SVM iSCSI 서비스 다운(ocumEvtVserverIscsiServiceStatusDown)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+스토리지 VM NFS 서비스 다운(ocumEvtVserverNfsServiceStatusDown)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+SVM FC/FCoE 서비스가 구성되지 않음(해당 없음)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+
+
+ a| 
+SVM iSCSI 서비스가 구성되지 않았습니다(해당 없음)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+
+
+ a| 
+SVM NFS 서비스가 구성되지 않았습니다(해당 없음)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+
+
+ a| 
+스토리지 VM이 중지되었습니다(ocumEvtVserverDown)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+AV 서버가 너무 바빠서 새 스캔 요청을 수락할 수 없습니다. *(nbladeVscanConnBackPressure)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+바이러스 검사를 위한 AV 서버 연결이 없습니다. *(nbladeVscanNoScannerConn)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+등록된 AV 서버가 없습니다 *(nbladeVscanNoRegdScanner)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+응답하지 않는 AV 서버 연결 *(nbladeVscanConnInactive)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+
+
+ a| 
+허가되지 않은 사용자가 AV 서버에 접근 시도 *(nbladeVscanBadUserPrivAccess)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+
+
+ a| 
+AV 서버에서 발견된 바이러스 *(nbladeVscanVirusDetected)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+오류
+
+|===
+
+
+== 영향 영역: 구성
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+SVM 발견됨(해당 없음)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+
+
+ a| 
+SVM 삭제됨(해당 없음)
+ a| 
+이벤트
+ a| 
+무리
+ a| 
+정보
+
+
+
+ a| 
+SVM 이름 변경됨(해당 없음)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+|===
+
+
+== 영향 영역: 성능
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+SVM IOPS 위험 임계값 위반(ocumSvmIopsIncident)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+SVM IOPS 경고 임계값 위반(ocumSvmIopsWarning)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+SVM MB/s 중요 임계값 위반(ocumSvmMbpsIncident)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+SVM MB/s 경고 임계값 위반(ocumSvmMbpsWarning)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+SVM 대기 시간 위험 임계값 위반(ocumSvmLatencyIncident)
+ a| 
+사건
+ a| 
+서포트 머신(SVM)
+ a| 
+비판적인
+
+
+
+ a| 
+SVM 지연 경고 임계값 위반(ocumSvmLatencyWarning)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+|===
+
+
+== 영향 영역: 보안
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+감사 로그 비활성화(ocumVserverAuditLogDisabled)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+로그인 배너 비활성화(ocumVserverLoginBannerDisabled)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+SSH가 안전하지 않은 암호를 사용하고 있습니다(ocumVserverSSHInsecure)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+로그인 배너가 변경되었습니다(ocumVserverLoginBannerChanged)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+스토리지 VM 랜섬웨어 방지 모니터링이 비활성화되었습니다(antiRansomwareSvmStateDisabled)
+ a| 
+위험
+ a| 
+서포트 머신(SVM)
+ a| 
+경고
+
+
+
+ a| 
+스토리지 VM 랜섬웨어 방지 모니터링이 활성화되었습니다(학습 모드)(antiRansomwareSvmStateDryrun)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+
+
+ a| 
+랜섬웨어 방지 모니터링에 적합한 스토리지 VM(학습 모드)(ocumEvtSvmArwCandidate)
+ a| 
+이벤트
+ a| 
+서포트 머신(SVM)
+ a| 
+정보
+
+|===

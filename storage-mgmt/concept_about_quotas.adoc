@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_about_quotas.html 
+sidebar: sidebar 
+keywords: about, quotas 
+summary: 할당량은 사용자, 그룹 또는 Qtree에서 사용하는 디스크 공간과 파일 수를 제한하거나 추적하는 방법을 제공합니다.  /etc/quotas 파일을 사용하여 할당량을 지정합니다.  할당량은 특정 볼륨이나 Qtree에 적용됩니다. 
+---
+= 할당량에 대하여
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+할당량은 사용자, 그룹 또는 Qtree에서 사용하는 디스크 공간과 파일 수를 제한하거나 추적하는 방법을 제공합니다.  다음을 사용하여 할당량을 지정합니다. `/etc/quotas` 파일.  할당량은 특정 볼륨이나 Qtree에 적용됩니다.

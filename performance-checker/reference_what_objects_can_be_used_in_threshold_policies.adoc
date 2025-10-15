@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: 일부 성능 카운터만 조합 정책에서 함께 사용할 수 있습니다.  1차 및 2차 성능 카운터가 지정되면 이벤트가 생성되기 전에 두 성능 카운터 모두 최대 한도를 초과해야 합니다. 
+---
+= 조합 임계값 정책에서 어떤 객체와 카운터를 사용할 수 있습니까?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일부 성능 카운터만 조합 정책에서 함께 사용할 수 있습니다.  1차 및 2차 성능 카운터가 지정되면 이벤트가 생성되기 전에 두 성능 카운터 모두 최대 한도를 초과해야 합니다.
+
+|===
+| 1차 저장 객체 및 카운터 | 2차 저장 객체 및 카운터 
+
+
+ a| 
+볼륨 지연 시간
+ a| 
+볼륨 IOPS
+
+
+
+ a| 
+볼륨 MB/s
+
+
+
+ a| 
+집계 활용
+
+
+
+ a| 
+사용된 총 성능 용량
+
+
+
+ a| 
+노드 활용도
+
+
+
+ a| 
+사용된 노드 성능 용량
+
+
+
+ a| 
+사용된 노드 성능 용량 - 인수
+
+
+
+ a| 
+LUN 지연 시간
+ a| 
+LUN IOPS
+
+
+
+ a| 
+LUNMB/초
+
+
+
+ a| 
+집계 활용
+
+
+
+ a| 
+사용된 총 성능 용량
+
+
+
+ a| 
+노드 활용도
+
+
+
+ a| 
+사용된 노드 성능 용량
+
+
+
+ a| 
+사용된 노드 성능 용량 - 인수
+
+|===
+[NOTE]
+====
+FlexVol 볼륨 대신 FlexGroup FlexVol volume 에 볼륨 조합 정책을 적용하는 경우 "`볼륨 IOPS`" 및 "`볼륨 MB/s`" 속성만 보조 카운터로 선택할 수 있습니다.  임계값 정책에 노드 또는 집계 속성 중 하나가 포함되어 있는 경우 해당 정책은 FlexGroup 볼륨에 적용되지 않으며, 이 경우를 설명하는 오류 메시지가 표시됩니다.  이는 FlexGroup 볼륨이 두 개 이상의 노드나 집계에 존재할 수 있기 때문입니다.
+
+====

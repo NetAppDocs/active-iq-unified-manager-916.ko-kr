@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_work_with_reports.html 
+sidebar: sidebar 
+keywords: work, reports 
+summary: 인벤토리 페이지 뷰를 찾아 공유 가능한 예약 보고서로 사용자 지정하는 방법을 알아보세요. 
+---
+= 보고서 작업
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+인벤토리 페이지 뷰를 찾아 공유 가능한 예약 보고서로 사용자 지정하는 방법을 알아보세요.

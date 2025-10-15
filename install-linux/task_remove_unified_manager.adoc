@@ -1,0 +1,38 @@
+---
+permalink: install-linux/task_remove_unified_manager.html 
+sidebar: sidebar 
+keywords: remove, unified manager 
+summary: 단일 명령으로 Red Hat Enterprise Linux 호스트에서 Unified Manager를 중지하고 제거할 수 있습니다. 
+---
+= 통합 관리자 제거
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+단일 명령으로 Red Hat Enterprise Linux 호스트에서 Unified Manager를 중지하고 제거할 수 있습니다.
+
+.시작하기 전에
+* Unified Manager를 제거하려는 서버에 대한 루트 사용자 액세스 권한이 있어야 합니다.
+* Linux 시스템에서는 보안 강화 Linux(SELinux)를 비활성화해야 합니다.  SELinux 런타임 모드를 "Permissive"로 변경하려면 다음을 사용하세요. `setenforce 0` 명령.
+* 소프트웨어를 제거하기 전에 Unified Manager 서버에서 모든 클러스터(데이터 소스)를 제거해야 합니다.
+* MySQL 포트 3306을 허용하거나 차단하기 위해 생성된 방화벽 규칙을 수동으로 삭제해야 합니다.  방화벽 규칙은 자동으로 삭제되지 않습니다.
+
+
+.단계
+. Unified Manager를 제거하려는 서버에 루트 사용자로 로그인합니다.
+. 서버에서 Unified Manager를 중지하고 제거합니다.
++
+`rpm -e netapp-um`
+
++
+이 단계에서는 관련된 모든 NetApp RPM 패키지가 제거됩니다.  Java, MySQL, p7zip 등의 필수 소프트웨어 모듈은 제거되지 않습니다.
+
+. *선택 사항:* 해당되는 경우 Java, MySQL, p7zip 등의 지원 소프트웨어 모듈을 제거합니다.
++
+`rpm -e p7zip mysql-community-client mysql-community-server mysql-community-common mysql-community-libs java-x.y`
+
+
+
+이 작업이 완료되면 소프트웨어가 제거됩니다.  모든 데이터는 `/opt/netapp/data` 디렉토리가 다음으로 이동되었습니다. `/opt/netapp/data/BACKUP` 제거 후 폴더.  Unified Manager를 제거하면 시스템의 다른 애플리케이션에서 필요하고 사용되는 경우가 아니면 Java 및 MySQL 패키지도 제거됩니다.  하지만 MySQL 데이터는 삭제되지 않습니다.

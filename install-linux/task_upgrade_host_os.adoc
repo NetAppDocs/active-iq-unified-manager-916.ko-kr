@@ -1,0 +1,70 @@
+---
+permalink: install-linux/task_upgrade_host_os.html 
+sidebar: sidebar 
+keywords: upgrade, host OS, red hat enterprise, linux 7.x, 8.x 
+summary: 이전에 Red Hat Enterprise Linux 7.x 시스템에 Unified Manager를 설치했고 Red Hat Enterprise Linux 8.x로 업그레이드해야 하는 경우 이 항목에 나열된 절차 중 하나를 따라야 합니다.  두 경우 모두 Red Hat Enterprise Linux 7.x 시스템에서 Unified Manager 백업을 만든 다음, 해당 백업을 Red Hat Enterprise Linux 8.x 시스템으로 복원해야 합니다. 
+---
+= 호스트 OS를 Red Hat Enterprise Linux 7.x에서 8.x로 업그레이드합니다.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+이전에 Red Hat Enterprise Linux 7.x 시스템에 Unified Manager를 설치했고 Red Hat Enterprise Linux 8.x로 업그레이드해야 하는 경우 이 항목에 나열된 절차 중 하나를 따라야 합니다.  두 경우 모두 Red Hat Enterprise Linux 7.x 시스템에서 Unified Manager 백업을 만든 다음, 해당 백업을 Red Hat Enterprise Linux 8.x 시스템으로 복원해야 합니다.  지원되는 Red Hat Enterprise Linux 버전은 8.0~8.10입니다.
+
+아래 나열된 두 옵션의 차이점은 한 경우에서는 새로운 8.x 서버에 Unified Manager 복원을 수행하고, 다른 경우에서는 동일한 서버에 복원 작업을 수행한다는 것입니다.
+
+이 작업을 수행하려면 Red Hat Enterprise Linux 7.x 시스템에서 Unified Manager의 백업을 만들어야 하므로 Unified Manager가 오프라인 상태를 최단 시간 동안 유지하도록 전체 업그레이드 프로세스를 완료할 준비가 된 경우에만 백업을 만들어야 합니다.  수집된 데이터의 차이는 Red Hat Enterprise Linux 7.x 시스템이 종료되고 새로운 Red Hat Enterprise Linux 8.x가 시작되기 전까지의 기간 동안 Unified Manager UI에 나타납니다.
+
+보다link:../health-checker/concept_manage_backup_and_restore_operations.html["백업 및 복원 작업 관리"] 백업 및 복원 프로세스에 대한 자세한 지침을 검토해야 하는 경우
+
+Red Hat Enterprise Linux 8.x 소프트웨어를 설치할 수 있는 예비 시스템이 있는 경우 다음 단계를 따라 Red Hat Enterprise Linux 7.x 시스템을 계속 사용할 수 있는 동안 해당 시스템에서 Unified Manager 복원을 수행할 수 있습니다.
+
+. Red Hat Enterprise Linux 8.x 소프트웨어로 새로운 서버를 설치하고 구성합니다.
++
+보다link:reference_red_hat_software_and_installation_requirements.html["Linux 소프트웨어 및 설치 요구 사항"] .
+
+. Red Hat Enterprise Linux 8.x 시스템에서 기존 Red Hat Enterprise Linux 7.x 시스템에 있는 것과 동일한 버전의 Unified Manager 소프트웨어를 설치합니다.
++
+보다link:concept_install_unified_manager_on_rhel.html["Linux에 Unified Manager 설치"] .
+
++
+설치가 완료되면 UI를 실행하거나 클러스터, 사용자 또는 인증 설정을 구성하지 마세요.  백업 파일은 복원 과정 중에 이 정보를 채웁니다.
+
+. Red Hat Enterprise Linux 7.x 시스템에서 웹 UI의 관리 메뉴에서 Unified Manager 백업을 만든 다음 백업 파일을 복사합니다.(`.7z` 파일) 및 데이터베이스 저장소 디렉토리의 내용(`/database-dumps-repo` 하위 디렉토리)를 외부 위치로 복사합니다.
+. Red Hat Enterprise Linux 7.x 시스템에서 Unified Manager를 종료합니다.
+. Red Hat Enterprise Linux 8.x 시스템에서 백업 파일을 복사합니다.(`.7z` 외부 위치에서 파일)로 `/opt/netapp/data/ocum-backup/` 그리고 데이터베이스 저장소 파일을 `/database-dumps-repo` 하위 디렉토리 `/ocum-backup` 예배 규칙서.
+. 백업 파일에서 Unified Manager 데이터베이스를 복원하려면 다음 명령을 입력하세요.
++
+`um backup restore -f /opt/netapp/data/ocum-backup/<backup_file_name>`
+
+. 웹 브라우저에 IP 주소나 URL을 입력하여 Unified Manager 웹 UI를 시작한 다음 시스템에 로그인합니다.
+
+
+시스템이 제대로 작동하는지 확인한 후 Red Hat Enterprise Linux 7.x 시스템에서 Unified Manager를 제거할 수 있습니다.
+
+*동일한 서버에서 호스트 OS 업그레이드*
+
+Red Hat Enterprise Linux 8.x 소프트웨어를 설치할 수 있는 여분의 시스템이 없는 경우 다음 단계를 따르세요.
+
+. 웹 UI의 관리 메뉴에서 Unified Manager 백업을 만든 다음 백업 파일을 복사합니다.(`.7z` 파일) 및 데이터베이스 저장소 디렉토리의 내용(`/database-dumps-repo` 하위 디렉토리)를 외부 위치로 복사합니다.
+. 시스템에서 Red Hat Enterprise Linux 7.x 이미지를 제거하고 시스템을 완전히 지웁니다.
+. 동일한 시스템에 Red Hat Enterprise Linux 8.x 소프트웨어를 설치하고 구성합니다.
++
+보다link:reference_red_hat_software_and_installation_requirements.html["Linux 소프트웨어 및 설치 요구 사항"] .
+
+. Red Hat Enterprise Linux 8.x 시스템에서는 Red Hat Enterprise Linux 7.x 시스템에 있던 Unified Manager 소프트웨어와 동일한 버전을 설치합니다.
++
+보다link:concept_install_unified_manager_on_rhel.html["Linux에 Unified Manager 설치"] .
+
++
+설치가 완료되면 UI를 실행하거나 클러스터, 사용자 또는 인증 설정을 구성하지 마세요.  백업 파일은 복원 과정 중에 이 정보를 채웁니다.
+
+. 백업 파일을 복사하세요(`.7z` 외부 위치에서 파일)로 `/opt/netapp/data/ocum-backup/` 그리고 데이터베이스 저장소 파일을 `/database-dumps-repo` 하위 디렉토리 `/ocum-backup` 예배 규칙서.
+. 백업 파일에서 Unified Manager 데이터베이스를 복원하려면 다음 명령을 입력하세요.
++
+`um backup restore -f /opt/netapp/data/ocum-backup/<backup_file_name>`
+
+. 웹 브라우저에 IP 주소나 URL을 입력하여 Unified Manager 웹 UI를 시작한 다음 시스템에 로그인합니다.
+

@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_restore_mysql_db_on_linux.html 
+sidebar: sidebar 
+keywords: restore, linux system, mysql, database, backup 
+summary: 데이터 손실이나 데이터 손상이 발생하는 경우 최소한의 데이터 손실로 Unified Manager를 이전의 안정적인 상태로 복원할 수 있습니다.  Unified Manager 유지 관리 콘솔을 사용하여 Unified Manager 데이터베이스를 로컬 또는 원격 Red Hat Enterprise Linux 시스템으로 복원할 수 있습니다. 
+---
+= Linux 시스템에서 MySQL 데이터베이스 백업 복원
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데이터 손실이나 데이터 손상이 발생하는 경우 최소한의 데이터 손실로 Unified Manager를 이전의 안정적인 상태로 복원할 수 있습니다.  Unified Manager 유지 관리 콘솔을 사용하여 Unified Manager 데이터베이스를 로컬 또는 원격 Red Hat Enterprise Linux 시스템으로 복원할 수 있습니다.
+
+.시작하기 전에
+* Unified Manager가 설치된 Linux 호스트에 대한 루트 사용자 자격 증명이 있어야 합니다.
+* Unified Manager 서버의 유지 관리 콘솔에 로그인하려면 권한이 있는 사용자 ID와 비밀번호가 있어야 합니다.
+* 복원 작업을 수행할 시스템에 Unified Manager 백업 파일과 데이터베이스 저장소 디렉터리의 내용을 복사해야 합니다.
++
+백업 파일을 기본 디렉토리에 복사하는 것이 좋습니다./`data/ocum` -지원.  데이터베이스 저장소 파일을 복사해야 합니다./`database-dumps-repo` 하위 디렉토리/`ocum-backup` 예배 규칙서.
+
+* 백업 파일은 다음과 같아야 합니다. `.7z` 유형.
+
+
+복원 기능은 플랫폼과 버전에 따라 다릅니다.  Unified Manager 백업은 동일한 버전의 Unified Manager에서만 복원할 수 있습니다.  Linux 백업 파일이나 가상 어플라이언스 백업 파일을 Red Hat Enterprise Linux 시스템으로 복원할 수 있습니다.
+
+[TIP]
+====
+백업 폴더 이름에 공백이 포함된 경우 절대 경로 또는 상대 경로를 큰따옴표로 묶어야 합니다.
+
+====
+.단계
+. Unified Manager를 설치한 후에는 새 서버로 복원을 수행하는 경우 UI를 시작하거나 설치가 완료된 후 클러스터, 사용자 또는 인증 설정을 구성하지 마세요.  백업 파일은 복원 과정 중에 이 정보를 채웁니다.
+. Secure Shell을 사용하여 Unified Manager 시스템의 IP 주소 또는 정규화된 도메인 이름에 연결합니다.
+. 유지 관리 사용자(umadmin) 이름과 비밀번호로 시스템에 로그인합니다.
+. 명령을 입력하세요 `maintenance_console` 그리고 Enter를 누르세요.
+. 유지 관리 콘솔의 *메인 메뉴*에서 *백업 복원* 옵션에 대한 번호를 입력합니다.
+. *MySQL 백업 복원*에 대한 번호를 입력하세요.
+. 메시지가 표시되면 백업 파일의 절대 경로를 입력합니다.
++
+[listing]
+----
+Bundle to restore from: /data/ocum-backup/UM_9.8.N151113.1348_backup_rhel_02-20-2020-04-45.7z
+----
++
+복원 작업이 완료되면 Unified Manager에 로그인할 수 있습니다.
+
+
+
+백업을 복원한 후 OnCommand Workflow Automation 서버가 작동하지 않으면 다음 단계를 수행하세요.
+
+. Workflow Automation 서버에서 Unified Manager 서버의 IP 주소를 최신 컴퓨터를 가리키도록 변경합니다.
+. Unified Manager 서버에서 1단계에서 획득에 실패하면 데이터베이스 비밀번호를 재설정합니다.
+

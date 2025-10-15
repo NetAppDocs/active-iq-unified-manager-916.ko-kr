@@ -1,0 +1,24 @@
+---
+permalink: events/concept_what_active_iq_platform_events_are.html 
+sidebar: sidebar 
+keywords: active iq, platform, events 
+summary: Unified Manager는 Active IQ 플랫폼에서 발견된 이벤트를 표시할 수 있습니다.  이러한 이벤트는 Unified Manager에서 모니터링하는 모든 스토리지 시스템에서 생성된 AutoSupport 메시지에 대해 일련의 규칙을 실행하여 생성됩니다. 
+---
+= Active IQ 플랫폼 이벤트는 무엇입니까?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager는 Active IQ 플랫폼에서 발견된 이벤트를 표시할 수 있습니다.  이러한 이벤트는 Unified Manager에서 모니터링하는 모든 스토리지 시스템에서 생성된 AutoSupport 메시지에 대해 일련의 규칙을 실행하여 생성됩니다.
+
+자세한 내용은 다음을 참조하세요. link:../events/concept_how_active_iq_platform_events_are_generated.html["Active IQ 플랫폼 이벤트가 생성되는 방식"].
+
+Unified Manager는 자동으로 새로운 규칙 파일을 확인하고 새로운 규칙이 있는 경우에만 새 파일을 다운로드합니다.  외부 네트워크 접속이 불가능한 사이트에서는 *저장소 관리* > *이벤트 설정* > *규칙 업로드*에서 수동으로 규칙을 업로드해야 합니다.
+
+이러한 Active IQ 이벤트는 기존 Unified Manager 이벤트와 겹치지 않으며 시스템 구성, 케이블링, 모범 사례 및 가용성 문제와 관련된 사고나 위험을 식별합니다.
+
+플랫폼 이벤트 활성화에 대한 자세한 내용은 다음을 참조하세요.link:../config/concept_active_iq_platform_events.html["Active IQ 포털 이벤트 활성화"] .  규칙 파일 업로드에 대한 자세한 내용은 다음을 참조하세요.link:../events/task_upload_new_active_iq_rules_file.html["새로운 Active IQ 규칙 파일 업로드"] .
+
+NetApp Active IQ 는 NetApp 하이브리드 클라우드 전반에서 스토리지 시스템 운영을 최적화하기 위해 예측 분석과 사전 지원을 제공하는 클라우드 기반 서비스입니다.  보다 https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["NetApp Active IQ"] 자세한 내용은.

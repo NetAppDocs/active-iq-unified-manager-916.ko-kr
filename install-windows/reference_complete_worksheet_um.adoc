@@ -1,0 +1,214 @@
+---
+permalink: install-windows/reference_complete_worksheet_um.html 
+sidebar: sidebar 
+keywords: complete, worksheet 
+summary: Unified Manager를 설치하고 구성하기 전에 해당 환경에 대한 구체적인 정보를 쉽게 사용할 수 있어야 합니다.  워크시트에 정보를 기록할 수 있습니다. 
+---
+= 워크시트를 완성하세요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager를 설치하고 구성하기 전에 해당 환경에 대한 구체적인 정보를 쉽게 사용할 수 있어야 합니다.  워크시트에 정보를 기록할 수 있습니다.
+
+
+
+== Unified Manager 설치 정보
+
+Unified Manager를 설치하는 데 필요한 세부 정보입니다.
+
+[cols="2*"]
+|===
+| 소프트웨어가 배포되는 시스템 | 당신의 가치 
+
+
+ a| 
+호스트 정규화된 도메인 이름
+ a| 
+
+
+
+ a| 
+호스트 IP 주소
+ a| 
+
+
+
+ a| 
+네트워크 마스크
+ a| 
+
+
+
+ a| 
+게이트웨이 IP 주소
+ a| 
+
+
+
+ a| 
+기본 DNS 주소
+ a| 
+
+
+
+ a| 
+보조 DNS 주소
+ a| 
+
+
+
+ a| 
+도메인 검색
+ a| 
+
+
+
+ a| 
+유지 관리 사용자 이름
+ a| 
+
+
+
+ a| 
+유지관리 사용자 비밀번호
+ a| 
+
+|===
+
+
+== Unified Manager 구성 정보
+
+설치 후 Unified Manager를 구성하는 방법에 대한 세부 정보입니다.  일부 값은 구성에 따라 선택 사항입니다.
+
+[cols="2*"]
+|===
+| 환경 | 당신의 가치 
+
+
+ a| 
+유지관리 사용자 이메일 주소
+ a| 
+
+
+
+ a| 
+SMTP 서버 호스트 이름 또는 IP 주소
+ a| 
+
+
+
+ a| 
+SMTP 사용자 이름
+ a| 
+
+
+
+ a| 
+SMTP 비밀번호
+ a| 
+
+
+
+ a| 
+SMTP 포트
+ a| 
+25 (기본값)
+
+
+
+ a| 
+알림이 전송되는 이메일
+ a| 
+
+
+
+ a| 
+인증 서버 호스트 이름 또는 IP 주소
+ a| 
+
+
+
+ a| 
+Active Directory 관리자 이름 또는 LDAP 바인딩 고유 이름
+ a| 
+
+
+
+ a| 
+Active Directory 암호 또는 LDAP 바인딩 암호
+ a| 
+
+
+
+ a| 
+인증 서버 기반 고유 이름
+ a| 
+
+
+
+ a| 
+ID 공급자(IdP) URL
+ a| 
+
+
+
+ a| 
+ID 공급자(IdP) 메타데이터
+ a| 
+
+
+
+ a| 
+SNMP 트랩 대상 호스트 IP 주소
+ a| 
+
+
+
+ a| 
+SNMP 포트
+ a| 
+
+|===
+
+
+== 클러스터 정보
+
+Unified Manager를 사용하여 관리하는 스토리지 시스템에 대한 세부 정보입니다.
+
+[cols="2*"]
+|===
+| N의 클러스터 1 | 당신의 가치 
+
+
+ a| 
+호스트 이름 또는 클러스터 관리 IP 주소
+ a| 
+
+
+
+ a| 
+ONTAP 관리자 사용자 이름
+
+[NOTE]
+====
+관리자에게 "`admin`" 역할이 할당되어야 합니다.
+
+==== a| 
+
+
+
+ a| 
+ONTAP 관리자 비밀번호
+ a| 
+
+
+
+ a| 
+규약
+ a| 
+HTTPS
+
+|===

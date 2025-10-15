@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_cluster_storage_reports.html 
+sidebar: sidebar 
+keywords: customize, cluster, storage, reports 
+summary: 이 섹션의 샘플 클러스터 스토리지 보고서는 스토리지 시스템 리소스를 모니터링하는 데 도움이 되는 클러스터 용량에 대한 보고서를 만드는 방법을 이해하는 데 도움이 되는 샘플일 뿐입니다. 
+---
+= 클러스터 스토리지 보고서 사용자 정의
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션의 샘플 클러스터 스토리지 보고서는 스토리지 시스템 리소스를 모니터링하는 데 도움이 되는 클러스터 용량에 대한 보고서를 만드는 방법을 이해하는 데 도움이 되는 샘플일 뿐입니다.

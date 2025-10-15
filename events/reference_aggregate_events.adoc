@@ -1,0 +1,408 @@
+---
+permalink: events/reference_aggregate_events.html 
+sidebar: sidebar 
+keywords: aggregate events, impact, area, availability, capacity, configuration, performance 
+summary: 집계 이벤트는 집계 상태에 대한 정보를 제공하므로 잠재적인 문제를 모니터링할 수 있습니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다. 
+---
+= 이벤트 집계
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+집계 이벤트는 집계 상태에 대한 정보를 제공하므로 잠재적인 문제를 모니터링할 수 있습니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다.
+
+
+
+== 영향 영역: 가용성
+
+별표(*)는 Unified Manager 이벤트로 변환된 EMS 이벤트를 식별합니다.
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+오프라인 집계(ocumEvtAggregateStateOffline)
+ a| 
+사건
+ a| 
+골재
+ a| 
+비판적인
+
+
+
+ a| 
+집계 실패(ocumEvtAggregateStateFailed)
+ a| 
+사건
+ a| 
+골재
+ a| 
+비판적인
+
+
+
+ a| 
+제한된 집계(ocumEvtAggregateStateRestricted)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 재구성(ocumEvtAggregateRaidStateReconstructing)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 저하(ocumEvtAggregateRaidStateDegraded)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+클라우드 계층 부분 도달 가능(ocumEventCloudTierPartiallyReachable)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+클라우드 계층에 도달할 수 없음(ocumEventCloudTierUnreachable)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+
+
+ a| 
+집계 재배치에 대한 클라우드 계층 액세스 거부 *(arlNetraCaCheckFailed)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+
+
+ a| 
+스토리지 장애 조치 중 집계 재배치에 대한 클라우드 계층 액세스 거부 *(gbNetraCaCheckFailed)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+
+
+ a| 
+MetroCluster 집계 남겨짐(ocumEvtMetroClusterAggregateLeftBehind)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+
+
+ a| 
+MetroCluster 집계 미러링 저하(ocumEvtMetroClusterAggregateMirrorDegraded)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+|===
+
+
+== 영향 영역: 용량
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+집계 공간 거의 가득 참(ocumEvtAggregateNearlyFull)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 공간 가득 참(ocumEvtAggregateFull)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+
+
+ a| 
+만기까지 집계 일수(ocumEvtAggregateDaysUntilFullSoon)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+
+
+ a| 
+집계 초과 커밋(ocumEvtAggregateOvercommitted)
+ a| 
+위험
+ a| 
+골재
+ a| 
+오류
+
+
+
+ a| 
+집계 거의 초과 커밋(ocumEvtAggregateAlmostOvercommitted)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 스냅샷 예약 가득 참(ocumEvtAggregateSnapReserveFull)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 성장률 비정상(ocumEvtAggregateGrowthRateAbnormal)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+|===
+
+
+== 영향 영역: 구성
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+발견된 집계(해당 없음)
+ a| 
+이벤트
+ a| 
+골재
+ a| 
+정보
+
+
+
+ a| 
+집계 이름 변경됨(해당 없음)
+ a| 
+이벤트
+ a| 
+골재
+ a| 
+정보
+
+
+
+ a| 
+집계 삭제됨(해당 없음)
+ a| 
+이벤트
+ a| 
+마디
+ a| 
+정보
+
+|===
+
+
+== 영향 영역: 성능
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+집계 IOPS 중요 임계값 위반(ocumAggregateIopsIncident)
+ a| 
+사건
+ a| 
+골재
+ a| 
+비판적인
+
+
+
+ a| 
+집계 IOPS 경고 임계값 위반(ocumAggregateIopsWarning)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 MB/s 중요 임계값 위반(ocumAggregateMbpsIncident)
+ a| 
+사건
+ a| 
+골재
+ a| 
+비판적인
+
+
+
+ a| 
+집계 MB/s 경고 임계값 위반(ocumAggregateMbpsWarning)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 대기 시간 중요 임계값 위반(ocumAggregateLatencyIncident)
+ a| 
+사건
+ a| 
+골재
+ a| 
+비판적인
+
+
+
+ a| 
+집계 지연 경고 임계값 위반(ocumAggregateLatencyWarning)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 성능 용량 사용 중요 임계값 위반(ocumAggregatePerfCapacityUsedIncident)
+ a| 
+사건
+ a| 
+골재
+ a| 
+비판적인
+
+
+
+ a| 
+집계 성능 용량 사용 경고 임계값 위반(ocumAggregatePerfCapacityUsedWarning)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 활용도 중요 임계값 위반(ocumAggregateUtilizationIncident)
+ a| 
+사건
+ a| 
+골재
+ a| 
+비판적인
+
+
+
+ a| 
+집계 사용률 경고 임계값 위반(ocumAggregateUtilizationWarning)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 디스크 과다 사용 임계값 위반(ocumAggregateDisksOverUtilizedWarning)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+
+
+ a| 
+집계 동적 임계값 위반(ocumAggregateDynamicEventWarning)
+ a| 
+위험
+ a| 
+골재
+ a| 
+경고
+
+|===

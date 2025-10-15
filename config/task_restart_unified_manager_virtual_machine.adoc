@@ -1,0 +1,26 @@
+---
+permalink: config/task_restart_unified_manager_virtual_machine.html 
+sidebar: sidebar 
+keywords: restart, unified manager, virtual, machine 
+summary: Unified Manager의 유지 관리 콘솔에서 가상 머신을 다시 시작할 수 있습니다.  새로운 보안 인증서를 생성한 후 또는 가상 머신에 문제가 있는 경우 다시 시작해야 합니다. 
+---
+= Unified Manager 가상 머신을 다시 시작합니다.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager의 유지 관리 콘솔에서 가상 머신을 다시 시작할 수 있습니다.  새로운 보안 인증서를 생성한 후 또는 가상 머신에 문제가 있는 경우 다시 시작해야 합니다.
+
+.시작하기 전에
+가상 어플라이언스의 전원이 켜져 있습니다.
+
+유지 관리 사용자로 유지 관리 콘솔에 로그인했습니다.
+
+*게스트 다시 시작* 옵션을 사용하여 vSphere에서 가상 머신을 다시 시작할 수도 있습니다.  자세한 내용은 VMware 설명서를 참조하세요.
+
+.단계
+. 유지 관리 콘솔에 액세스합니다.
+. *시스템 구성* > *가상 머신 재부팅*을 선택합니다.
+

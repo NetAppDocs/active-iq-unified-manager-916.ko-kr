@@ -1,0 +1,98 @@
+---
+permalink: api-automation/concept_manage_access_endpoint.html 
+sidebar: sidebar 
+keywords: manage, endpoints, access 
+summary: '스토리지 가상 머신(SVM), LUN 및 파일 공유를 프로비저닝하는 데 필요한 액세스 엔드포인트 또는 논리 인터페이스(LIF)를 만들어야 합니다.  Active IQ Unified Manager 환경에서 SVM, LUN 또는 파일 공유에 대한 액세스 엔드포인트를 보고, 만들고, 수정하고, 삭제할 수 있습니다.' 
+---
+= API를 사용하여 액세스 엔드포인트 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 가상 머신(SVM), LUN 및 파일 공유를 프로비저닝하는 데 필요한 액세스 엔드포인트 또는 논리 인터페이스(LIF)를 만들어야 합니다.  Active IQ Unified Manager 환경에서 SVM, LUN 또는 파일 공유에 대한 액세스 엔드포인트를 보고, 만들고, 수정하고, 삭제할 수 있습니다.
+
+
+
+== 액세스 엔드포인트 보기
+
+다음 방법을 사용하여 Unified Manager 환경에서 액세스 엔드포인트 목록을 볼 수 있습니다.  특정 SVM, LUN 또는 파일 공유의 액세스 엔드포인트 목록을 쿼리하려면 SVM, LUN 또는 파일 공유에 대한 고유 식별자를 입력해야 합니다.  고유한 액세스 엔드포인트 키를 입력하여 특정 액세스 엔드포인트의 세부 정보를 검색할 수도 있습니다.
+
+[cols="3*"]
+|===
+| 범주 | HTTP 동사 | 길 
+
+
+ a| 
+스토리지 제공자
+ a| 
+얻다
+ a| 
+`/storage-provider/access-endpoints`
+
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== 액세스 엔드포인트 추가
+
+사용자 정의 액세스 엔드포인트를 만들고 필요한 속성을 할당할 수 있습니다.  생성하려는 액세스 엔드포인트의 세부 정보를 입력 매개변수로 입력해야 합니다.  이 API나 시스템 관리자 또는 ONTAP CLI를 사용하여 각 노드에 액세스 엔드포인트를 만들 수 있습니다.  액세스 엔드포인트 생성에는 IPv4 및 IPv6 주소가 모두 지원됩니다.
+
+[NOTE]
+====
+LUN과 파일 공유를 성공적으로 프로비저닝하려면 노드당 최소한의 액세스 엔드포인트 수로 SVM을 구성해야 합니다.  노드당 최소 두 개의 액세스 엔드포인트로 SVM을 구성해야 합니다. 하나는 CIFS 및/또는 NFS 프로토콜을 지원하고, 다른 하나는 iSCSI 또는 FCP 프로토콜을 지원합니다.
+
+====
+[cols="3*"]
+|===
+| 범주 | HTTP 동사 | 길 
+
+
+ a| 
+스토리지 제공자
+ a| 
+우편
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
+
+
+== 액세스 엔드포인트 삭제
+
+다음 방법을 사용하여 특정 액세스 엔드포인트를 삭제할 수 있습니다.  특정 액세스 엔드포인트를 삭제하려면 액세스 엔드포인트 키를 입력 매개변수로 제공해야 합니다.
+
+[cols="3*"]
+|===
+| 범주 | HTTP 동사 | 길 
+
+
+ a| 
+스토리지 제공자
+ a| 
+삭제
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== 액세스 엔드포인트 수정
+
+다음 방법을 사용하여 액세스 엔드포인트를 수정하고 해당 속성을 업데이트할 수 있습니다.  특정 액세스 엔드포인트를 수정하려면 액세스 엔드포인트 키를 제공해야 합니다.  또한 업데이트하려는 속성과 해당 속성을 입력해야 합니다.
+
+[cols="3*"]
+|===
+| 범주 | HTTP 동사 | 길 
+
+
+ a| 
+스토리지 제공자
+ a| 
+반점
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===

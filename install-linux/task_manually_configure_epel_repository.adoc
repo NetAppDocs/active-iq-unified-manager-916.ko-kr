@@ -1,0 +1,35 @@
+---
+permalink: install-linux/task_manually_configure_epel_repository.html 
+sidebar: sidebar 
+keywords: manually, configure, epel repository 
+summary: 'Unified Manager를 설치하는 시스템에 EPEL(Enterprise Linux용 추가 패키지) 저장소에 액세스할 수 없는 경우, 성공적인 설치를 위해 저장소를 수동으로 다운로드하여 구성해야 합니다.' 
+---
+= EPEL 저장소를 수동으로 구성합니다.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager를 설치하는 시스템에 EPEL(Enterprise Linux용 추가 패키지) 저장소에 액세스할 수 없는 경우, 성공적인 설치를 위해 저장소를 수동으로 다운로드하여 구성해야 합니다.
+
+EPEL 저장소는 시스템에 설치해야 하는 필수 타사 유틸리티에 대한 액세스를 제공합니다.  Red Hat Enterprise Linux 시스템에 Unified Manager를 설치하려면 EPEL 저장소를 사용합니다.
+
+.단계
+. 설치에 필요한 EPEL 저장소를 다운로드하세요.  버전 8은 다음에서 다운로드하세요.
++
+`+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm+`
+
++
+버전 9는 다음에서 다운로드하세요:
+
++
+`wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm`
+
+. EPEL 저장소를 구성하세요:
++
+`yum install epel-release-latest-<version>.noarch.rpm`
+
+
+
+예를 들어 Red Hat Enterprise Linux 8 시스템의 경우 모듈식 RPM 패키지가 포함된 내부 저장소가 있는 경우 `_javapackages-filesystem-<version>.module.rpm_` 모듈형 패키지의 메타데이터도 동일한 저장소에서 사용할 수 있는지 확인하세요.

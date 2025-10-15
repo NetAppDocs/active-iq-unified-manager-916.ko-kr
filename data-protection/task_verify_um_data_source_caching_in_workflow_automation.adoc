@@ -1,0 +1,26 @@
+---
+permalink: data-protection/task_verify_um_data_source_caching_in_workflow_automation.html 
+sidebar: sidebar 
+keywords: verify, unified manager, data source, cache, workflow automation 
+summary: Workflow Automation에서 데이터 소스 수집이 성공했는지 확인하여 Unified Manager 데이터 소스 캐싱이 올바르게 작동하는지 확인할 수 있습니다.  Workflow Automation을 Unified Manager와 통합할 때 이 작업을 수행하면 통합 후에도 Workflow Automation 기능을 사용할 수 있습니다. 
+---
+= Workflow Automation에서 Unified Manager 데이터 소스 캐싱 확인
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow Automation에서 데이터 소스 수집이 성공했는지 확인하여 Unified Manager 데이터 소스 캐싱이 올바르게 작동하는지 확인할 수 있습니다.  Workflow Automation을 Unified Manager와 통합할 때 이 작업을 수행하면 통합 후에도 Workflow Automation 기능을 사용할 수 있습니다.
+
+.시작하기 전에
+이 작업을 수행하려면 Workflow Automation에서 관리자 역할이나 아키텍트 역할이 할당되어야 합니다.
+
+.단계
+. 워크플로 자동화 UI에서 *실행* > *데이터 소스*를 선택합니다.
+. Unified Manager 데이터 소스의 이름을 마우스 오른쪽 버튼으로 클릭한 다음 *지금 가져오기*를 선택합니다.
+. 오류 없이 인수가 성공적으로 완료되었는지 확인하세요.
++
+Workflow Automation과 Unified Manager의 통합을 성공시키려면 획득 오류를 해결해야 합니다.
+
+

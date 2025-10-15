@@ -1,0 +1,28 @@
+---
+permalink: health-checker/concept_how_group_actions_work_on_storage_objects.html 
+sidebar: sidebar 
+keywords: group actions, work, storage, objects 
+summary: 그룹 작업은 그룹 내의 모든 저장소 개체에 수행되는 작업입니다.  예를 들어, 볼륨 임계값 그룹 작업을 구성하여 그룹의 모든 볼륨의 볼륨 임계값을 동시에 변경할 수 있습니다. 
+---
+= 그룹 작업이 저장소 개체에서 작동하는 방식
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+그룹 작업은 그룹 내의 모든 저장소 개체에 수행되는 작업입니다.  예를 들어, 볼륨 임계값 그룹 작업을 구성하여 그룹의 모든 볼륨의 볼륨 임계값을 동시에 변경할 수 있습니다.
+
+그룹은 고유한 그룹 작업 유형을 지원합니다.  하나의 볼륨 상태 임계값 그룹 작업 유형만 갖는 그룹을 가질 수 있습니다.  하지만 가능한 경우 동일한 그룹에 대해 다른 유형의 그룹 작업을 구성할 수 있습니다.  그룹 작업의 순위는 작업이 저장 개체에 적용되는 순서를 결정합니다.  저장소 개체의 세부 정보 페이지는 저장소 개체에 적용되는 그룹 작업에 대한 정보를 제공합니다.
+
+
+
+== 고유한 그룹 작업의 예
+
+그룹 G1 및 G2에 속하는 볼륨 A를 고려하고, 이러한 그룹에 대해 다음과 같은 볼륨 상태 임계값 그룹 작업이 구성되어 있습니다.
+
+* `Change_capacity_threshold`볼륨 용량을 구성하기 위한 순위 1의 그룹 작업
+* `Change_snapshot_copies`볼륨의 스냅샷 복사본을 구성하기 위한 순위 2의 그룹 작업
+
+
+그만큼 `Change_capacity_threshold` 그룹 행동은 항상 우선시됩니다. `Change_snapshot_copies` 그룹 작업이며 볼륨 A에 적용됩니다. Unified Manager가 모니터링의 한 주기를 완료하면 볼륨 A의 상태 임계값 관련 이벤트가 다시 평가됩니다. `Change_capacity_threshold` 집단행동.  G1 또는 G2 그룹에 대해 다른 볼륨 임계값 유형의 그룹 작업을 구성할 수 없습니다.

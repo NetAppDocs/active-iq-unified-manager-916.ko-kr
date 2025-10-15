@@ -1,0 +1,18 @@
+---
+permalink: events/concept_how_active_iq_platform_events_are_generated.html 
+sidebar: sidebar 
+keywords: active IQ, platform, events, generated 
+summary: Active IQ 플랫폼 인시던트와 위험은 다음 다이어그램에 표시된 대로 Unified Manager 이벤트로 변환됩니다. 
+---
+= Active IQ 플랫폼 이벤트가 생성되는 방식
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ 플랫폼 인시던트와 위험은 다음 다이어그램에 표시된 대로 Unified Manager 이벤트로 변환됩니다.
+
+image::../media/aiq_and_um_event_generation.png[Active IQ 플랫폼 인시던트와 위험이 Unified Manager 이벤트로 변환된 것을 보여주는 UI 스크린샷입니다.]
+
+보시다시피, Active IQ 플랫폼에 컴파일된 규칙 파일은 최신 상태로 유지되고, 클러스터 AutoSupport 메시지는 매일 생성되며, Unified Manager는 매일 이벤트 목록을 업데이트합니다.

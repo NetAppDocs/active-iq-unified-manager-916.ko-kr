@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_change_performance_statistics_collection_interval.html 
+sidebar: sidebar 
+keywords: change, performance, statistics, collection, interval 
+summary: 성능 통계의 기본 수집 간격은 5분입니다.  대규모 클러스터의 컬렉션이 기본 시간 내에 완료되지 않는 경우 이 간격을 10분 또는 15분으로 변경할 수 있습니다.  이 설정은 Unified Manager 인스턴스가 모니터링하는 모든 클러스터의 통계 수집에 영향을 미칩니다. 
+---
+= 성능 통계 수집 간격 변경
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+성능 통계의 기본 수집 간격은 5분입니다.  대규모 클러스터의 컬렉션이 기본 시간 내에 완료되지 않는 경우 이 간격을 10분 또는 15분으로 변경할 수 있습니다.  이 설정은 Unified Manager 인스턴스가 모니터링하는 모든 클러스터의 통계 수집에 영향을 미칩니다.
+
+.시작하기 전에
+Unified Manager 서버의 유지 관리 콘솔에 로그인하려면 권한이 있는 사용자 ID와 비밀번호가 있어야 합니다.
+
+성능 통계 수집이 제때 완료되지 않는 문제는 배너 메시지로 표시됩니다. `Unable to consistently collect from cluster <cluster_name> or Data collection is taking too long on cluster <cluster_name>.`
+
+통계 수집 문제로 인해 필요한 경우에만 수집 간격을 변경해야 합니다.  다른 이유로는 이 설정을 변경하지 마세요.
+
+[NOTE]
+====
+기본 설정인 5분에서 이 값을 변경하면 Unified Manager에서 보고하는 성능 이벤트의 수와 빈도에 영향을 미칠 수 있습니다.  예를 들어, 시스템에서 정의한 성능 임계값은 정책을 30분 동안 초과하면 이벤트를 트리거합니다.  5분 수집을 사용하는 경우, 해당 정책을 6회 연속으로 초과해야 합니다.  15분 간격 수거의 경우, 해당 정책은 두 번의 수거 기간 동안만 초과될 수 있습니다.
+
+====
+클러스터 설정 페이지 하단의 메시지는 현재 통계 데이터 수집 간격을 나타냅니다.
+
+.단계
+. SSH를 사용하여 Unified Manager 호스트에 유지 관리 사용자로 로그인합니다.
++
+Unified Manager 유지 관리 콘솔 프롬프트가 표시됩니다.
+
+. *성능 폴링 간격 구성*이라고 표시된 메뉴 옵션의 번호를 입력한 다음 Enter 키를 누릅니다.
+. 메시지가 표시되면 유지 관리 사용자 비밀번호를 다시 입력하세요.
+. 설정하려는 새로운 폴링 간격에 대한 숫자를 입력한 다음 Enter를 누릅니다.
+
+
+Unified Manager 수집 간격을 10분 또는 15분으로 변경하고 외부 데이터 공급자(예: Graphite)에 현재 연결되어 있는 경우, 데이터 공급자 전송 간격을 Unified Manager 수집 간격보다 크거나 같도록 변경해야 합니다.

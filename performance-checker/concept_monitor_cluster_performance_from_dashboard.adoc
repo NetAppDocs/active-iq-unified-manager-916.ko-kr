@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_dashboard.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, dashboard 
+summary: Unified Manager 대시보드는 Unified Manager 인스턴스에서 모니터링하는 모든 클러스터의 높은 수준의 성능 상태를 표시하는 몇 개의 패널을 제공합니다.  관리되는 클러스터의 전반적인 성능을 평가하고, 식별된 특정 이벤트를 빠르게 기록, 찾거나 해결을 위해 할당할 수 있습니다. 
+---
+= 대시보드에서 클러스터 성능 모니터링
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 대시보드는 Unified Manager 인스턴스에서 모니터링하는 모든 클러스터의 높은 수준의 성능 상태를 표시하는 몇 개의 패널을 제공합니다.  관리되는 클러스터의 전반적인 성능을 평가하고, 식별된 특정 이벤트를 빠르게 기록, 찾거나 해결을 위해 할당할 수 있습니다.

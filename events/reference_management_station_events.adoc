@@ -1,0 +1,188 @@
+---
+permalink: events/reference_management_station_events.html 
+sidebar: sidebar 
+keywords: management, station, events, impact area, configuration, performance 
+summary: 관리 스테이션 이벤트는 Unified Manager가 설치된 서버의 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 해줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다. 
+---
+= 관리 스테이션 이벤트
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+관리 스테이션 이벤트는 Unified Manager가 설치된 서버의 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 해줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다.
+
+
+
+== 영향 영역: 구성
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+관리 서버 디스크 공간이 거의 가득 찼습니다(ocumEvtUnifiedManagerDiskSpaceNearlyFull)
+ a| 
+위험
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+관리 서버 디스크 공간 가득 참(ocumEvtUnifiedManagerDiskSpaceFull)
+ a| 
+사건
+ a| 
+관리국
+ a| 
+비판적인
+
+
+
+ a| 
+관리 서버 메모리 부족(ocumEvtUnifiedManagerMemoryLow)
+ a| 
+위험
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+관리 서버 메모리가 거의 부족합니다(ocumEvtUnifiedManagerMemoryAlmostOut)
+ a| 
+사건
+ a| 
+관리국
+ a| 
+비판적인
+
+
+
+ a| 
+MySQL 로그 파일 크기가 증가했습니다. 재시작이 필요합니다(ocumEvtMysqlLogFileSizeWarning)
+ a| 
+사건
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+총 감사 로그 크기 할당이 곧 가득 찰 예정입니다.
+ a| 
+위험
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+Syslog 서버 인증서가 만료됩니다
+ a| 
+위험
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+Syslog 서버 인증서가 만료되었습니다
+ a| 
+위험
+ a| 
+관리국
+ a| 
+오류
+
+
+
+ a| 
+감사 로그 파일이 변조되었습니다.
+ a| 
+위험
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+감사 로그 파일이 삭제되었습니다.
+ a| 
+위험
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+Syslog 서버 연결 오류
+ a| 
+위험
+ a| 
+관리국
+ a| 
+오류
+
+
+
+ a| 
+Syslog 서버 구성이 변경되었습니다
+ a| 
+이벤트
+ a| 
+관리국
+ a| 
+경고
+
+|===
+
+
+== 영향 영역: 성능
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+성능 데이터 분석에 영향이 있습니다(ocumEvtUnifiedManagerDataMissingAnalyze)
+ a| 
+위험
+ a| 
+관리국
+ a| 
+경고
+
+
+
+ a| 
+성능 데이터 수집에 영향이 있습니다(ocumEvtUnifiedManagerDataMissingCollection)
+ a| 
+사건
+ a| 
+관리국
+ a| 
+비판적인
+
+|===
+[NOTE]
+====
+마지막 두 가지 성능 이벤트는 Unified Manager 7.2에서만 사용할 수 있습니다.  이러한 이벤트 중 하나가 새 상태에 존재하고 이후 Unified Manager 소프트웨어의 최신 버전으로 업그레이드하면 해당 이벤트는 자동으로 삭제되지 않습니다.  이벤트를 수동으로 해결됨 상태로 옮겨야 합니다.
+
+====

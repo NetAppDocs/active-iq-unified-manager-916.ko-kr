@@ -1,0 +1,32 @@
+---
+permalink: reporting/concept_unified_manager_reporting.html 
+sidebar: sidebar 
+keywords: unified, manager, reporting 
+summary: 'Active IQ Unified Manager (이전 OnCommand Unified Manager)를 사용하면 ONTAP 스토리지 시스템에 대한 보고서를 보고, 사용자 지정하고, 다운로드하고, 일정을 예약할 수 있습니다.  보고서는 스토리지 시스템 용량, 상태, 성능 및 보호 관계에 대한 세부 정보를 제공할 수 있습니다.' 
+---
+= 통합 관리자 보고
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager (이전 OnCommand Unified Manager)를 사용하면 ONTAP 스토리지 시스템에 대한 보고서를 보고, 사용자 지정하고, 다운로드하고, 일정을 예약할 수 있습니다.  보고서는 스토리지 시스템 용량, 상태, 성능, 보안 및 보호 관계에 대한 세부 정보를 제공할 수 있습니다.
+
+Active IQ Unified Manager 9.6에 도입된 새로운 Unified Manager 보고 및 일정 관리 기능은 Unified Manager 버전 9.5에서 사용이 중단된 이전 보고 엔진을 대체합니다.
+
+보고 기능은 네트워크에 대한 다양한 관점을 제공하고 용량, 상태, 성능, 보안 및 보호 데이터에 대한 실행 가능한 정보를 제공합니다.  열 표시, 숨기기, 재정렬, 데이터 필터링, 데이터 정렬, 결과 검색 등을 통해 보기를 사용자 지정할 수 있습니다.  사용자 정의 보기를 저장하여 재사용하거나, 보고서로 다운로드하거나, 반복 보고서로 예약하여 이메일로 배포할 수 있습니다.
+
+Microsoft® Excel 형식으로 뷰를 다운로드하여 사용자 지정할 수 있습니다.  복잡한 정렬, 계층형 필터, 피벗 테이블, 차트 등 고급 Excel 기능을 사용할 수 있습니다.  만족스러운 Excel 보고서가 만들어지면 보고서를 예약하고 공유할 때마다 사용할 수 있도록 Excel 파일을 업로드할 수 있습니다.
+
+사용자 인터페이스에서 보고서를 생성하는 것 외에도 다음과 같은 추가 방법을 사용하여 Unified Manager에서 상태, 보안 및 성능 데이터를 추출할 수 있습니다.
+
+* ODBC(Open Database Connectivity) 및 ODBC 도구를 사용하여 클러스터 정보를 위해 데이터베이스에 직접 액세스합니다.
+* 검토하려는 정보를 반환하기 위해 Unified Manager REST API를 실행합니다.
+
+
+이번 Active IQ Unified Manager 릴리스에서는 보고서가 다음과 같이 향상되었습니다.
+
+* 구성된 일정에 따라 보고서가 이메일로 전송됩니다.  주문형 보고서를 생성하는 경우에도 이메일을 받게 됩니다.
+* 보고서의 파일 이름과 보고서의 메타데이터에는 보고서가 생성된 호스트 이름이 포함됩니다.  누군가가 파일 이름을 변경하더라도 이 향상된 기능으로 인해 보고서가 생성된 호스트 이름을 식별할 수 있습니다.
+

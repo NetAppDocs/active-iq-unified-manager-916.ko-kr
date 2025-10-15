@@ -1,0 +1,14 @@
+---
+permalink: events/concept_understand_more_about_events.html 
+sidebar: sidebar 
+keywords: understand, more, events 
+summary: 이벤트에 대한 개념을 이해하면 클러스터와 클러스터 객체를 효율적으로 관리하고 알림을 적절하게 정의하는 데 도움이 됩니다. 
+---
+= 이벤트에 대해 더 자세히 알아보세요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+이벤트에 대한 개념을 이해하면 클러스터와 클러스터 객체를 효율적으로 관리하고 알림을 적절하게 정의하는 데 도움이 됩니다.

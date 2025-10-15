@@ -1,0 +1,99 @@
+---
+permalink: events/reference_snapvault_relationship_events.html 
+sidebar: sidebar 
+keywords: snapvault, relationship, events, impact area, protection 
+summary: SnapVault 관계 이벤트는 SnapVault 관계 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 도와줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다. 
+---
+= SnapVault 관계 이벤트
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapVault 관계 이벤트는 SnapVault 관계 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 도와줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다.
+
+
+
+== 영향 영역: 보호
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+비동기 볼트 비정상(ocumEvtSnapVaultRelationshipUnhealthy)
+ a| 
+위험
+ a| 
+SnapMirror 관계
+ a| 
+경고
+
+
+
+ a| 
+비동기 볼트가 끊어짐(ocumEvtSnapVaultRelationshipStateBrokenoff)
+ a| 
+위험
+ a| 
+SnapMirror 관계
+ a| 
+오류
+
+
+
+ a| 
+비동기 볼트 초기화 실패(ocumEvtSnapVaultRelationshipInitializeFailed)
+ a| 
+위험
+ a| 
+SnapMirror 관계
+ a| 
+오류
+
+
+
+ a| 
+비동기 볼트 업데이트 실패(ocumEvtSnapVaultRelationshipUpdateFailed)
+ a| 
+위험
+ a| 
+SnapMirror 관계
+ a| 
+오류
+
+
+
+ a| 
+비동기 볼트 지연 오류(ocumEvtSnapVaultRelationshipLagError)
+ a| 
+위험
+ a| 
+SnapMirror 관계
+ a| 
+오류
+
+
+
+ a| 
+비동기 볼트 지연 경고(ocumEvtSnapVaultRelationshipLagWarning)
+ a| 
+위험
+ a| 
+SnapMirror 관계
+ a| 
+경고
+
+
+
+ a| 
+비동기 볼트 재동기화 실패(ocumEvtSnapvaultRelationshipResyncFailed)
+ a| 
+위험
+ a| 
+SnapMirror 관계
+ a| 
+오류
+
+|===

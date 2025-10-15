@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_download_reports.html 
+sidebar: sidebar 
+keywords: download, reports 
+summary: '보고서를 다운로드하고 해당 데이터를 쉼표로 구분된 값(CSV) 파일, Microsoft Excel(.XLSX) 파일 또는 PDF 파일로 로컬 또는 네트워크 드라이브에 저장할 수 있습니다.  Microsoft Excel과 같은 스프레드시트 응용 프로그램을 사용하면 CSV 및 XLSX 파일을 열 수 있으며, Adobe Acrobat과 같은 리더를 사용하면 PDF 파일을 열 수 있습니다.' 
+---
+= 보고서 다운로드
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+보고서를 다운로드하고 해당 데이터를 쉼표로 구분된 값(CSV) 파일, Microsoft Excel(.XLSX) 파일 또는 PDF 파일로 로컬 또는 네트워크 드라이브에 저장할 수 있습니다.  Microsoft Excel과 같은 스프레드시트 응용 프로그램을 사용하면 CSV 및 XLSX 파일을 열 수 있으며, Adobe Acrobat과 같은 리더를 사용하면 PDF 파일을 열 수 있습니다.
+
+.단계
+. *보고서* 버튼을 클릭하면 다음 중 하나의 보고서를 다운로드할 수 있습니다.
++
+[cols="2*"]
+|===
+| 선택하다 | 에게... 
+
+
+ a| 
+CSV 다운로드
+ a| 
+보고서를 쉼표로 구분된 값(CSV) 파일로 저장합니다.
+
+
+
+ a| 
+PDF 다운로드
+ a| 
+보고서를 .pdf 파일로 저장합니다.
+
+
+
+ a| 
+엑셀 다운로드
+ a| 
+보고서를 Microsoft Excel(XLSX) 파일로 저장합니다.
+
+|===
+

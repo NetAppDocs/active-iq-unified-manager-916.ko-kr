@@ -1,0 +1,60 @@
+---
+permalink: install-linux/task_download_unified_manager.html 
+sidebar: sidebar 
+keywords: download, Unified Manager 
+summary: 'Unified Manager를 다운로드해야 합니다. `.zip` NetApp 지원 사이트에서 Unified Manager를 설치할 파일을 다운로드하세요.' 
+---
+= Unified Manager 다운로드
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager를 다운로드해야 합니다. `.zip` NetApp 지원 사이트에서 Unified Manager를 설치할 파일을 다운로드하세요.
+
+.시작하기 전에
+NetApp 지원 사이트에 대한 로그인 자격 증명이 있어야 합니다.
+
+Red Hat Enterprise Linux 시스템용 Unified Manager 설치 패키지를 다운로드합니다.
+
+.단계
+. NetApp 지원 사이트에 로그인하고 Unified Manager 다운로드 페이지로 이동합니다.
++
+https://mysupport.netapp.com/site/products/all/details/activeiq-unified-manager/downloads-tab["NetApp 지원 사이트"]
+
+. 필요한 Unified Manager 버전을 선택하고 최종 사용자 라이선스 계약(EULA)에 동의합니다.
+. Linux용 Unified Manager 설치 프로그램 파일을 다운로드하고 저장하세요. `.zip` 파일을 대상 시스템의 디렉토리로 복사합니다.
++
+[NOTE]
+====
+** Red Hat Enterprise Linux 시스템에 맞는 올바른 버전의 설치 파일을 다운로드했는지 확인하세요.  Red Hat Enterprise Linux 8 또는 9가 설치되어 있는지 여부에 따라 적절한 버전의 Unified Manager를 다운로드해야 합니다. `.zip` 파일.
+** NetApp 코드 서명 인증서를 다운로드할 것을 권장합니다.(`.pem` ) 및 디지털 서명(`.sig` )와 함께 `.zip` 파일.
+
+
+====
+. 다운로드한 소프트웨어의 무결성을 위해 체크섬을 확인하세요.
+. 코드 서명 인증서와 디지털 서명을 다운로드했다면 설치 프로그램 파일의 무결성을 확인할 수 있습니다.  다음 명령을 사용하여 설치 프로그램 파일의 무결성을 확인할 수 있습니다.
++
+** 이 명령은 코드 서명 인증서의 공개 키를 사용하여 파일을 생성합니다.
++
+[listing]
+----
+openssl x509 -pubkey -noout -in AIQUM-RHEL-CLIENT-INTER-ROOT.pem > <public_key_file_name>
+----
++
+*** 여기서 *AIQUM-RHEL-CLIENT-INTER-ROOT.pem*은 코드 서명 인증서가 포함된 파일입니다.
+
+
+** 이 명령은 설치 프로그램 파일의 서명을 확인합니다.
++
+[listing]
+----
+openssl dgst -sha256 -verify <public_key_file_name> -signature <signature_file_name> ActiveIQUnifiedManager-<version>.zip
+----
++
+다음과 유사한 메시지 `Verified Ok` 설치 프로그램 파일을 사용하는 것이 안전함을 확인합니다.
+
+
+
+

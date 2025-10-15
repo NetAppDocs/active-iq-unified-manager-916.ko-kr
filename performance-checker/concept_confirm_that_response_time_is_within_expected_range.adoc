@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_confirm_that_response_time_is_within_expected_range.html 
+sidebar: sidebar 
+keywords: confirm, latency, within, expected, range 
+summary: '클러스터 구성 요소가 경합 중일 때 해당 구성 요소를 사용하는 볼륨 작업 부하의 응답 시간(대기 시간)이 감소할 수 있습니다.  경합 중인 구성 요소의 각 피해자 워크로드의 대기 시간을 검토하여 실제 대기 시간이 예상 범위 내에 있는지 확인할 수 있습니다.  볼륨 이름을 클릭하면 해당 볼륨의 과거 데이터를 볼 수도 있습니다.' 
+---
+= 지연 시간이 예상 범위 내에 있는지 확인하세요.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+클러스터 구성 요소가 경합 중일 때 해당 구성 요소를 사용하는 볼륨 작업 부하의 응답 시간(대기 시간)이 감소할 수 있습니다.  경합 중인 구성 요소의 각 피해자 워크로드의 대기 시간을 검토하여 실제 대기 시간이 예상 범위 내에 있는지 확인할 수 있습니다.  볼륨 이름을 클릭하면 해당 볼륨의 과거 데이터를 볼 수도 있습니다.
+
+성능 이벤트가 더 이상 유효하지 않은 상태인 경우 이벤트에 관련된 각 피해자의 지연 시간은 예상 범위 내로 돌아왔을 수 있습니다.

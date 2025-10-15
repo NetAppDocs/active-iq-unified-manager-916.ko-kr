@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_tasks_and_information_related_to_several_workflows.html 
+sidebar: sidebar 
+keywords: tasks, information, workflows 
+summary: '이벤트에 대한 메모 추가 및 검토, 이벤트 할당, 이벤트 확인 및 해결, 볼륨, 스토리지 가상 머신(SVM), 집계 등에 대한 세부 정보를 포함하여 워크플로를 이해하고 완료하는 데 도움이 되는 일부 작업과 참조 텍스트는 Unified Manager의 많은 워크플로에서 공통적입니다.' 
+---
+= 여러 워크플로와 관련된 작업 및 정보
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+이벤트에 대한 메모 추가 및 검토, 이벤트 할당, 이벤트 확인 및 해결, 볼륨, 스토리지 가상 머신(SVM), 집계 등에 대한 세부 정보를 포함하여 워크플로를 이해하고 완료하는 데 도움이 되는 일부 작업과 참조 텍스트는 Unified Manager의 많은 워크플로에서 공통적입니다.

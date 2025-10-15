@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: 보고서 워크플로를 설명하는 의사결정 트리입니다. 
+---
+= 보고서 워크플로
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+보고서 워크플로를 설명하는 의사결정 트리입니다.
+
+image::../media/reports_view_workflow.png[보고서 보기 워크플로]

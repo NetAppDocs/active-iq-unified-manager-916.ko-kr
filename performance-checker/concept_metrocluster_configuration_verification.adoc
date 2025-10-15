@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/concept_metrocluster_configuration_verification.html 
+sidebar: sidebar 
+keywords: metrocluster, configuration, verification 
+summary: MetroCluster 구성에서 미러링된 워크로드의 성능 문제를 방지하려면 MetroCluster 구성이 올바르게 설정되어 있는지 확인하세요.  구성을 변경하거나 소프트웨어나 하드웨어 구성 요소를 업그레이드하여 워크로드 성능을 개선할 수도 있습니다. 
+---
+= MetroCluster 구성 확인
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC 및 IP 구성을 통한 MetroCluster 에서 미러링된 워크로드의 성능 문제를 방지하려면 MetroCluster 구성이 올바르게 설정되어 있는지 확인하세요.  구성을 변경하거나 소프트웨어나 하드웨어 구성 요소를 업그레이드하여 워크로드 성능을 개선할 수도 있습니다.
+
+참조하다 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 문서"] FC(Fibre Channel) 스위치, 케이블, ISL(스위치 간 링크)을 포함하여 MetroCluster 구성에서 클러스터를 설정하는 방법에 대한 지침을 참조하세요.  또한 로컬 및 원격 클러스터가 미러 볼륨 데이터와 통신할 수 있도록 MetroCluster 소프트웨어를 구성하는 데 도움이 됩니다.  IP 설정을 통한 MetroCluster 에 대한 특정 정보는 다음을 참조하세요. https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["MetroCluster IP 구성 설치"] .
+
+MetroCluster 구성을 요구 사항과 비교할 수 있습니다. https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 문서"] MetroCluster 구성에서 구성 요소를 변경하거나 업그레이드하면 작업 부하 성능이 향상될 수 있는지 확인합니다.  이러한 비교는 다음 질문에 답하는 데 도움이 될 수 있습니다.
+
+* 컨트롤러가 귀하의 작업 부하에 적합합니까?
+* 더 많은 처리량을 처리하기 위해 ISL 번들을 더 큰 대역폭으로 업그레이드해야 합니까?
+* 스위치의 버퍼 간 크레딧(BBC)을 조정하여 대역폭을 늘릴 수 있나요?
+* 워크로드가 SSD(Solid State Drive) 스토리지에 대한 쓰기 처리량이 높은 경우, 처리량을 수용하기 위해 FC-SAS 브리지를 업그레이드해야 합니까?
+
+
+*관련 정보*
+
+* MetroCluster 구성 요소를 교체하거나 업그레이드하는 방법에 대한 정보는 다음을 참조하세요. https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 문서"] .
+* 컨트롤러 업그레이드에 대한 정보는 다음을 참조하세요. https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html["스위치오버 및 스위치백을 사용하여 MetroCluster FC 구성에서 컨트롤러 업그레이드"] 그리고 https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html["스위치오버 및 스위치백을 사용하여 MetroCluster IP 구성에서 컨트롤러 업그레이드"]
+

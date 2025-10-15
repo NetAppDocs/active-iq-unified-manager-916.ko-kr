@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_storage_efficiency_is.html 
+sidebar: sidebar 
+keywords: storage, efficiency 
+summary: '저장 효율성을 통해 가장 낮은 비용으로 최대 양의 데이터를 저장할 수 있으며, 더 적은 공간을 사용하면서 빠른 데이터 증가를 수용할 수 있습니다.  NetApp 스토리지 효율성 전략은 핵심 ONTAP 운영 체제와 WAFL(Write Anywhere File Layout) 파일 시스템이 제공하는 내장 스토리지 가상화와 통합 스토리지 기반에 기반을 두고 있습니다.' 
+---
+= 저장 효율성은 무엇입니까?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+저장 효율성을 통해 가장 낮은 비용으로 최대 양의 데이터를 저장할 수 있으며, 더 적은 공간을 사용하면서 빠른 데이터 증가를 수용할 수 있습니다.  NetApp 스토리지 효율성 전략은 핵심 ONTAP 운영 체제와 WAFL(Write Anywhere File Layout) 파일 시스템이 제공하는 내장 스토리지 가상화와 통합 스토리지 기반에 기반을 두고 있습니다.
+
+스토리지 효율성에는 씬 프로비저닝, 스냅샷 복사, 중복 제거, 데이터 압축, FlexClone, SnapVault 및 볼륨 SnapMirror 를 사용한 씬 복제, RAID-DP, Flash Cache, Flash Pool 집계, FabricPool 지원 집계와 같은 기술을 사용하는 것이 포함되며, 이러한 기술은 스토리지 활용도를 높이고 스토리지 비용을 줄이는 데 도움이 됩니다.
+
+통합 스토리지 아키텍처를 사용하면 SAN(스토리지 영역 네트워크), NAS(네트워크 연결 스토리지), 보조 스토리지를 단일 플랫폼에 효율적으로 통합할 수 있습니다.
+
+Flash Pool 집계 또는 Flash Cache 및 RAID-DP 기술로 구성된 직렬 고급 기술 연결(SATA) 드라이브와 같은 고밀도 디스크 드라이브는 성능과 복원력에 영향을 주지 않고 효율성을 높입니다.
+
+FabricPool 지원 집계에는 로컬 성능 계층으로 모든 SSD 집계 또는 HDD 집계( ONTAP 9.8부터 시작)가 포함되고, 클라우드 계층으로 지정하는 개체 저장소가 포함됩니다.  FabricPool 구성하면 데이터에 자주 액세스하는지 여부에 따라 어떤 스토리지 계층(로컬 계층 또는 클라우드 계층)에 데이터를 저장해야 하는지 관리하는 데 도움이 됩니다.
+
+씬 프로비저닝, 스냅샷 복사, 중복 제거, 데이터 압축, SnapVault 및 볼륨 SnapMirror 를 사용한 씬 복제, FlexClone 과 같은 기술은 더 나은 절감 효과를 제공합니다.  이러한 기술을 개별적으로 또는 함께 사용하여 최대의 저장 효율성을 달성할 수 있습니다.

@@ -1,0 +1,45 @@
+---
+permalink: install-windows/task_upgrade_openjdk_on_windows_ocum.html 
+sidebar: sidebar 
+keywords: openjdk, jre, upgrade 
+summary: Unified Manager가 설치된 Windows 서버에서 최신 버전의 OpenJDK로 업그레이드하면 보안 취약점에 대한 수정 사항을 얻을 수 있습니다. 
+---
+= OpenJDK 업그레이드
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager가 설치된 Windows 서버에서 최신 버전의 OpenJDK로 업그레이드하면 보안 취약점에 대한 수정 사항을 얻을 수 있습니다.
+
+.시작하기 전에
+Unified Manager가 설치된 시스템에 대한 Windows 관리자 권한이 있어야 합니다.
+
+릴리스 패밀리 내에서 OpenJDK 릴리스를 업데이트할 수 있습니다.  예를 들어, OpenJDK 11.0.16에서 OpenJDK 11.0.18로 업그레이드할 수 있지만, OpenJDK 11에서 OpenJDK 12로 직접 업데이트할 수는 없습니다.
+
+.단계
+. Unified Manager 호스트 컴퓨터에서 관리자 사용자로 로그인합니다.
+. OpenJDK 사이트에서 대상 시스템에 적합한 버전의 OpenJDK(64비트)를 다운로드합니다.
++
+예를 들어 다운로드 `jdk-11.0.18_windows-x64_bin.zip from https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html` .
+
++
+
+NOTE: 파일을 다운로드하려면 Oracle 계정이 필요합니다.  Oracle 계정이 없으면 다음으로 이동하세요.link:https://login.oracle.com/mysso/signon.jsp?request_id=007["Oracle 계정 로그인"] 페이지를 만들어 보세요.
+
+. Windows 서비스 콘솔을 사용하여 다음 Unified Manager 서비스를 중지합니다.
++
+** NetApp Active IQ 인수 서비스(Ocie-au)
+** NetApp Active IQ 관리 서버 서비스(Oncommandsvc)
+
+
+. 확장하다 `zip` 파일.
+. 결과에서 디렉토리와 파일을 복사합니다. `jdk` 디렉토리(예: `jdk-11.0.18` Java가 설치된 위치로.  예: `C:\Program Files\NetApp\JDK\`
+. Windows 서비스 콘솔을 사용하여 Unified Manager 서비스를 시작합니다.
++
+** NetApp Active IQ 관리 서버 서비스(Oncommandsvc)
+** NetApp Active IQ 인수 서비스(Ocie-au)
+
+
+

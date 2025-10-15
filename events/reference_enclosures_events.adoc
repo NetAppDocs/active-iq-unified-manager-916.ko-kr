@@ -1,0 +1,101 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: 인클로저 이벤트는 데이터 센터의 디스크 셸프 인클로저 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 해줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다. 
+---
+= 인클로저 이벤트
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+인클로저 이벤트는 데이터 센터의 디스크 셸프 인클로저 상태에 대한 정보를 제공하여 잠재적인 문제를 모니터링할 수 있도록 해줍니다.  이벤트는 영향 영역별로 그룹화되며 이벤트 및 트랩 이름, 영향 수준, 소스 유형, 심각도가 포함됩니다.
+
+
+
+== 영향 영역: 가용성
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+디스크 쉘프 팬 고장(ocumEvtShelfFanFailed)
+ a| 
+사건
+ a| 
+보관 선반
+ a| 
+비판적인
+
+
+
+ a| 
+디스크 쉘프 전원 공급 장치 실패(ocumEvtShelfPowerSupplyFailed)
+ a| 
+사건
+ a| 
+보관 선반
+ a| 
+비판적인
+
+
+
+ a| 
+디스크 쉘프 멀티패스가 구성되지 않았습니다(ocumDiskShelfConnectivityNotInMultiPath)
+
+이 이벤트는 다음에는 적용되지 않습니다.
+
+* MetroCluster 구성에 있는 클러스터
+* 다음 플랫폼: FAS2554, FAS2552, FAS2520 및 FAS2240
+
+ a| 
+위험
+ a| 
+마디
+ a| 
+경고
+
+
+
+ a| 
+디스크 셸프 경로 오류(ocumDiskShelfConnectivityPathFailure)
+ a| 
+위험
+ a| 
+보관 선반
+ a| 
+경고
+
+|===
+
+
+== 영향 영역: 구성
+
+|===
+| 이벤트 이름(트랩 이름) | 영향 수준 | 소스 유형 | 심각성 
+
+
+ a| 
+디스크 쉘프가 발견되었습니다(해당 없음)
+ a| 
+이벤트
+ a| 
+마디
+ a| 
+정보
+
+
+
+ a| 
+디스크 선반 제거됨(해당 없음)
+ a| 
+이벤트
+ a| 
+마디
+ a| 
+정보
+
+|===

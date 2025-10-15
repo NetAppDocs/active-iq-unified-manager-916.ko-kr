@@ -1,0 +1,80 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_with_most_available_iops.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, available, IOPS 
+summary: 이 보고서는 새로운 워크로드를 프로비저닝할 수 있는 집계 유형별로 가장 많은 IOPS를 제공하는 집계를 보여줍니다. 
+---
+= 가장 많은 사용 가능한 IOPS를 포함하는 집계를 보려면 보고서를 만듭니다.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 보고서는 새로운 워크로드를 프로비저닝할 수 있는 집계 유형별로 가장 많은 IOPS를 제공하는 집계를 보여줍니다.
+
+.시작하기 전에
+* 애플리케이션 관리자 또는 스토리지 관리자 역할이 있어야 합니다.
+
+
+다음 단계에 따라 Health: All Volumes 보기를 열고, Excel에서 보기를 다운로드하고, 사용 가능한 용량 차트를 만들고, 사용자 지정 Excel 파일을 업로드하고, 최종 보고서를 예약합니다.
+
+.단계
+. 왼쪽 탐색 창에서 *저장소* > *집계*를 클릭합니다.
+. *보기* 드롭다운에서 *성과: 모든 집계*를 선택합니다.
+. *표시/숨기기*를 선택하여 표시하세요. `Available IOPS` 열을 숨기고 `Cluster FQDN, Inactive Data Reporting,` 그리고 `Threshold Policy` 기둥.
+. 드래그 앤 드롭 `Available IOPS` 그리고 `Free Capacity` 옆에 있는 열 `Type` 열.
+. 사용자 정의 보기의 이름을 지정하고 저장합니다. `Available IOPS Per Aggr.`
+. *보고서* > *Excel 다운로드*를 선택합니다.
++
+image::../media/download_excel_menu.png[보고서에서 Excel을 다운로드하는 방법을 보여주는 UI 스크린샷입니다.]
+
++
+브라우저에 따라 파일을 저장하려면 *확인*을 클릭해야 할 수도 있습니다.
+
+. 필요한 경우 *편집 활성화*를 클릭하세요.
+. Excel에서 다운로드한 파일을 엽니다.
+. 데이터 시트에서 시트 왼쪽 상단에 있는 작은 삼각형을 클릭하여 시트 전체를 선택합니다.
+. *데이터* 리본에서 *정렬*을 선택하세요. `Sort & Filter area.`
+. 다음 정렬 수준을 설정합니다.
++
+.. *정렬 기준*을 다음과 같이 지정하세요. `Available IOPS` (IOPS), *정렬 기준* `Cell Values,` 그리고 *주문*은 `Largest to Smallest.`
+.. *레벨 추가*를 클릭하세요.
+.. *정렬 기준*을 다음과 같이 지정하세요. `Type` , *정렬 기준* `Cell Values,` 그리고 *주문*은 `Z to A.`
+.. *레벨 추가*를 클릭하세요.
+.. *정렬 기준*을 다음과 같이 지정하세요. `Free Capacity (GB),` *정렬 기준* `Cell Values,` 그리고 *주문*은 `Largest to Smallest.`
+.. *OK*를 클릭하세요.
+
+
+. Excel 파일을 저장하고 닫습니다.
+. Unified Manager에서 *보고서* > *Excel 업로드*를 선택합니다.
++
+[NOTE]
+====
+Excel 파일을 다운로드한 것과 같은 보기에 있는지 확인하세요.
+
+====
+. 이 경우 수정한 Excel 파일을 선택하세요. `performance-aggregates-<date>.xlsx.`
+. *열기*를 클릭하세요.
+. *제출*을 클릭하세요.
++
+*보고서* > *Excel 업로드* 메뉴 항목 옆에 체크 표시가 나타납니다.
+
++
+image::../media/upload_excel.png[보고서에 Excel을 업로드하는 방법을 보여주는 UI 스크린샷입니다.]
+
+. *예약된 보고서*를 클릭합니다.
+. *일정 추가*를 클릭하면 보고서 일정 페이지에 새 행이 추가되어 새 보고서에 대한 일정 특성을 정의할 수 있습니다.
+. 보고서 일정에 대한 이름을 입력하고 다른 보고서 필드를 완료한 다음 확인 표시(image:../media/blue_check.gif[""] ) 행의 끝에.
++
+[NOTE]
+====
+보고서에 *XLSX* 형식을 선택하세요.
+
+====
++
+보고서는 테스트로 즉시 전송됩니다.  그 후, 보고서가 생성되어 지정된 빈도로 등록된 수신자에게 이메일로 전송됩니다.
+
+
+
+보고서에 표시된 결과를 바탕으로 사용 가능한 IOPS가 가장 큰 집계에 새로운 워크로드를 프로비저닝할 수 있습니다.

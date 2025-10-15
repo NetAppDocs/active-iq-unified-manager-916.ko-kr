@@ -1,0 +1,116 @@
+---
+permalink: api-automation/concept_gateway_apis.html 
+sidebar: sidebar 
+keywords: access, ONTAP, APIs, proxy, access 
+summary: 게이트웨이 API는 Active IQ Unified Manager 자격 증명을 사용하여 ONTAP REST API를 실행하고 스토리지 객체를 관리할 수 있는 이점을 제공합니다.  이러한 API는 Unified Manager 웹 UI에서 API Gateway 기능이 활성화된 경우 사용할 수 있습니다. 
+---
+= 프록시 액세스를 통해 ONTAP API에 액세스
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+게이트웨이 API는 Active IQ Unified Manager 자격 증명을 사용하여 ONTAP REST API를 실행하고 스토리지 객체를 관리할 수 있는 이점을 제공합니다.  이러한 API는 Unified Manager 웹 UI에서 API Gateway 기능이 활성화된 경우 사용할 수 있습니다.
+
+Unified Manager REST API는 ONTAP 클러스터인 Unified Manager 데이터 소스에서 수행할 선택된 작업 세트만 지원합니다.  ONTAP API를 통해 다른 기능을 활용할 수 있습니다.  게이트웨이 API를 사용하면 Unified Manager가 관리하는 ONTAP 클러스터에서 수행되는 모든 API 요청을 터널링하기 위한 패스스루 인터페이스가 될 수 있으며, 각 데이터 센터 클러스터에 개별적으로 로그인하지 않아도 됩니다.  Unified Manager 인스턴스에서 관리하는 ONTAP 클러스터 전반에서 API를 실행하기 위한 단일 관리 지점 역할을 합니다.  API Gateway 기능을 사용하면 Unified Manager를 단일 제어 평면으로 사용하여 개별적으로 로그인하지 않고도 여러 ONTAP 클러스터를 관리할 수 있습니다.  게이트웨이 API를 사용하면 Unified Manager에 로그인한 상태를 유지하고 ONTAP REST API 작업을 실행하여 ONTAP 클러스터를 관리할 수 있습니다.
+
+[NOTE]
+====
+모든 사용자는 GET 작업을 사용하여 쿼리를 실행할 수 있습니다.  애플리케이션 관리자는 모든 ONTAP REST 작업을 실행할 수 있습니다.
+
+====
+게이트웨이는 ONTAP API와 동일한 형식으로 헤더와 본문 요청을 유지하여 API 요청을 터널링하는 프록시 역할을 합니다.  Unified Manager 자격 증명을 사용하여 개별 클러스터 자격 증명을 전달하지 않고도 ONTAP 클러스터에 액세스하고 관리하기 위한 특정 작업을 실행할 수 있습니다.  클러스터 인증 및 클러스터 관리를 계속 관리하지만 API 요청을 특정 클러스터에서 직접 실행되도록 리디렉션합니다.  API에서 반환된 응답은 ONTAP 에서 직접 실행된 해당 ONTAP REST API에서 반환된 응답과 동일합니다.
+
+[cols="3*"]
+|===
+| HTTP 동사 | 경로(URL) | 설명 
+
+
+ a| 
+`GET`
+ a| 
+`/gateways`
+ a| 
+이 GET 메서드는 ONTAP REST 호출을 지원하는 Unified Manager에서 관리하는 모든 클러스터 목록을 검색합니다.  클러스터 세부 정보를 확인하고 클러스터 UUID 또는 UUID(Universal Unique Identifier)를 기반으로 다른 방법을 실행할 수 있습니다.
+
+[NOTE]
+====
+게이트웨이 API는 ONTAP 9.5 이상에서 지원하는 클러스터만 검색하고 HTTPS를 통해 Unified Manager에 추가합니다.
+
+====
+
+
+ a| 
+`GET`
+
+`POST`
+
+`DELETE`
+
+`PATCH`
+
+`OPTIONS`(Swagger에서는 사용할 수 없음)
+
+`HEAD`(Swagger에서는 사용할 수 없음)
+ a| 
+`/gateways/\{uuid}/\{path}`
+
+[NOTE]
+====
+\{uuid}의 값은 REST 작업이 수행될 클러스터 UUID로 대체되어야 합니다.  또한 UUID가 ONTAP 9.5 이상에서 지원하는 클러스터의 UUID이고 HTTPS를 통해 Unified Manager에 추가되었는지 확인하세요.  \{path}는 ONTAP REST URL로 대체되어야 합니다.  제거해야 합니다 `/api/` URL에서.
+
+==== a| 
+이는 모든 ONTAP REST API에 대한 POST, DELETE, PATCH 작업 및 GET을 지원하는 단일 지점 프록시 API입니다.  ONTAP 에서 지원하는 한 모든 API에는 제한이 적용되지 않습니다.  터널링이나 프록시 기능은 비활성화할 수 없습니다.
+
+그만큼 `OPTIONS` 이 메서드는 ONTAP REST API에서 지원하는 모든 작업을 반환합니다.  예를 들어 ONTAP API가 다음만 지원하는 경우 `GET` 작업, 실행 중 `OPTIONS` 이 게이트웨이 API를 사용하여 메서드가 반환됩니다. `GET` 응답으로.  이 방법은 Swagger에서는 지원되지 않지만 다른 API 도구에서는 수행할 수 있습니다.
+
+그만큼 `OPTIONS` 이 메서드는 리소스를 사용할 수 있는지 여부를 판별합니다.  이 작업은 HTTP 응답 헤더에서 리소스에 대한 메타데이터를 보는 데 사용할 수 있습니다.  이 방법은 Swagger에서는 지원되지 않지만 다른 API 도구에서는 수행할 수 있습니다.
+
+|===
+
+
+== API Gateway 터널링을 이해하세요
+
+게이트웨이 API를 사용하면 Unified Manager를 통해 ONTAP 객체를 관리할 수 있습니다.  Unified Manager는 클러스터와 인증 세부 정보를 관리하고 요청을 ONTAP REST 엔드포인트로 리디렉션합니다.  게이트웨이 API는 헤더와 응답 본문의 URL과 HATEOAS(Hypermedia as the Engine of Application State) 링크를 API 게이트웨이 기본 URL로 변환합니다.  게이트웨이 API는 ONTAP REST URL을 추가하고 필요한 ONTAP REST 엔드포인트를 실행하는 프록시 기반 URL 역할을 합니다.
+
+
+NOTE: ONTAP API가 API 게이트웨이를 통해 성공적으로 실행되려면 해당 API가 실행 중인 ONTAP 클러스터 버전에서 지원되어야 합니다.  ONTAP 클러스터에서 지원되지 않는 API를 실행하면 아무런 결과도 반환되지 않습니다.
+
+이 예에서 게이트웨이 API(프록시 기본 URL)는 다음과 같습니다. `+/gateways/{uuid}/+`
+
+사용된 ONTAP API는 다음과 같습니다. `/storage/volumes` .  경로 매개변수 값으로 ONTAP API REST URL을 추가해야 합니다.
+
+[NOTE]
+====
+경로를 추가하는 동안 "`를 제거했는지 확인하십시오./`" symbol at the beginning of the URL. For the API `/storage/volumes,` 추가하다 `storage/volumes.`
+
+====
+첨부된 URL은 다음과 같습니다. `+/gateways/{uuid}/storage/volumes+`
+
+실행 중 `GET` 작업에서 생성된 URL은 다음과 같습니다. `GEThttps://<hostname\>/api/gateways/<cluster_UUID\>/storage/volumes`
+
+그만큼 `/api` 추가된 URL에서 ONTAP REST URL의 태그가 제거되고 게이트웨이 API의 태그는 유지됩니다.
+
+*샘플 cURL 명령*
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/gateways/1cd8a442-86d1-11e0-ae1c-9876567890123/storage/volumes" -H "accept: application/hal+json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+API는 해당 클러스터의 스토리지 볼륨 목록을 반환합니다.  응답 형식은 ONTAP 에서 동일한 API를 실행할 때 수신하는 것과 동일합니다.  반환된 상태 코드는 ONTAP REST 상태 코드입니다.
+
+
+
+== API 범위 설정
+
+모든 API에는 클러스터 범위 내에 설정된 컨텍스트가 있습니다.  스토리지 VM을 기반으로 작동하는 API는 범위가 클러스터이기도 합니다. 즉, API 작업은 관리되는 클러스터 내의 특정 스토리지 VM에서 수행됩니다.  당신이 실행할 때 `/gateways/\{uuid}/\{path}` API를 사용하려면 작업을 실행하는 클러스터의 클러스터 UUID(Unified Manager 데이터 소스 UUID)를 입력해야 합니다.  해당 클러스터 내의 특정 스토리지 VM에 대한 컨텍스트를 설정하려면 스토리지 VM 키를 X-Dot-SVM-UUID 매개변수로 입력하거나 스토리지 VM 이름을 X-Dot-SVM-Name 매개변수로 입력합니다.  매개변수는 문자열 헤더에 필터로 추가되고 작업은 해당 클러스터 내의 해당 스토리지 VM 범위 내에서 실행됩니다.
+
+*샘플 cURL 명령*
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/gateways/e4f33f90-f75f-11e8-9ed9-00a098e3215f/storage/volume" -H "accept: application/hal+json" -H "X-Dot-SVM-UUID: d9c33ec0-5b61-11e9-8760-00a098e3215f"
+-H "Authorization: Basic <Base64EncodedCredentials>"
+----
+ONTAP REST API 사용에 대한 자세한 내용은 다음을 참조하세요.https://docs.netapp.com/us-en/ontap-automation/index.html["ONTAP REST API 자동화"]

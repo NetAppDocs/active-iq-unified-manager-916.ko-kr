@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_typical_window_layouts_um_6_x.html 
+sidebar: sidebar 
+keywords: typical, window, layouts, object, list, details 
+summary: 일반적인 창 레이아웃을 이해하면 Active IQ Unified Manager 효과적으로 탐색하고 사용하는 데 도움이 됩니다.  대부분의 Unified Manager 창은 개체 목록이나 세부 정보라는 두 가지 일반 레이아웃 중 하나와 비슷합니다.  권장되는 디스플레이 설정은 최소 1280 x 1024 픽셀입니다. 
+---
+= 일반적인 창 레이아웃
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일반적인 창 레이아웃을 이해하면 Active IQ Unified Manager 효과적으로 탐색하고 사용하는 데 도움이 됩니다.  대부분의 Unified Manager 창은 개체 목록이나 세부 정보라는 두 가지 일반 레이아웃 중 하나와 비슷합니다.  권장되는 디스플레이 설정은 최소 1280 x 1024 픽셀입니다.
+
+다음 다이어그램에 있는 모든 요소가 모든 창에 포함되어 있는 것은 아닙니다.
+
+
+
+== 객체 목록 창 레이아웃
+
+image::../media/object_list.png[객체 목록]
+
+
+
+== 객체 세부 정보 창 레이아웃
+
+image::../media/object_details.gif[객체 세부 정보]

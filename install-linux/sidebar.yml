@@ -1,0 +1,71 @@
+---
+section: install-linux
+title: Linux 시스템에 Unified Manager 설치
+entries:
+- title: Active IQ Unified Manager 소개
+  url: "/install-linux/concept_introduction_to_unified_manager.html"
+  entries:
+  - title: Unified Manager 서버가 수행하는 작업
+    url: "/install-linux/concept_what_unified_manager_server_does.html"
+  - title: 설치 순서 개요
+    url: "/install-linux/concept_overview_of_installation_sequence_um.html"
+- title: Unified Manager 설치 요구 사항
+  url: "/install-linux/concept_requirements_for_install_unified_manager.html"
+  entries:
+  - title: 가상 인프라 및 하드웨어 시스템 요구 사항
+    url: "/install-linux/concept_virtual_infrastructure_or_hardware_system_requirements.html"
+  - title: Linux 소프트웨어 및 설치 요구 사항
+    url: "/install-linux/reference_red_hat_software_and_installation_requirements.html"
+  - title: 지원되는 브라우저
+    url: "/install-linux/concept_browser_and_platform_requirements.html"
+  - title: 프로토콜 및 포트 요구 사항
+    url: "/install-linux/reference_protocol_and_port_requirements.html"
+  - title: 워크시트를 완성하세요
+    url: "/install-linux/reference_complete_worksheet_um.html"
+- title: Unified Manager 소프트웨어 설치, 업그레이드 및 제거
+  url: "/install-linux/concept_install_upgrade_and_remove_unified_manager_software.html"
+  entries:
+  - title: 설치 과정 개요
+    url: "/install-linux/concept_overview_of_installation_process_on_red_hat.html"
+  - title: 필요한 소프트웨어 저장소 설정
+    url: "/install-linux/concept_set_up_required_software_repositories_um.html"
+    entries:
+    - title: EPEL 저장소를 수동으로 구성합니다.
+      url: "/install-linux/task_manually_configure_epel_repository.html"
+    - title: MySQL 저장소를 수동으로 구성합니다.
+      url: "/install-linux/task_manually_configure_mysql_repository.html"
+  - title: NFS 또는 CIFS 공유에 대한 SELinux 요구 사항
+    url: "/install-linux/task_selinux_requirements_for_mounting_opt_netapp.html"
+  - title: Linux 시스템에 Unified Manager 설치
+    url: "/install-linux/concept_install_unified_manager_on_rhel.html"
+    entries:
+    - title: 설치 전에 사용자 정의 사용자 홈 디렉토리와 umadmin 비밀번호를 만드세요.
+      url: "/install-linux/task_create_custom_user_home_directory_and_umadmin.html"
+    - title: Unified Manager 다운로드
+      url: "/install-linux/task_download_unified_manager.html"
+    - title: Unified Manager 설치
+      url: "/install-linux/task_install_unified_manager_linux.html"
+    - title: Unified Manager 설치 중에 생성된 사용자
+      url: "/install-linux/reference_users_created_in_unified_manager.html"
+    - title: JBoss 비밀번호 변경
+      url: "/install-linux/task_change_jboss_password.html"
+  - title: Red Hat Enterprise Linux에서 Unified Manager 업그레이드
+    url: "/install-linux/concept_upgrade_unified_manager_on_rhel.html"
+    entries:
+    - title: Unified Manager 버전에 지원되는 업그레이드 경로
+      url: "/include/upgrade-path.html"
+    - title: Unified Manager 업그레이드
+      url: "/install-linux/task_upgrade_unified_manager.html"
+    - title: 호스트 OS를 Red Hat Enterprise Linux 7.x에서 8.x로 업그레이드합니다.
+      url: "/install-linux/task_upgrade_host_os.html"
+  - title: Unified Manager 설치 후 타사 제품 업그레이드
+    url: "/install-linux/concept_upgrade_third_party_products_on_linux_um.html"
+    entries:
+    - title: Linux에서 OpenJDK 업그레이드
+      url: "/install-linux/task_upgrade_openjdk_on_linux_ocum.html"
+  - title: Unified Manager를 다시 시작하세요
+    url: "/install-linux/task_restart_unified_manager.html"
+  - title: 통합 관리자 제거
+    url: "/install-linux/task_remove_unified_manager.html"
+  - title: 사용자 정의 umadmin 사용자 및 유지 관리 그룹 제거
+    url: "/install-linux/task_remove_custom_umadmin_user_and_maintenance_group.html"

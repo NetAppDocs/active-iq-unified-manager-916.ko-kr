@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/task_view_active_events_from_notification_bell.html 
+sidebar: sidebar 
+keywords: view, active, events, notification, bell 
+summary: 메뉴 표시줄의 알림 벨을 사용하면 Unified Manager가 추적하는 가장 중요한 활성 이벤트를 빠르게 볼 수 있습니다. 
+---
+= 알림 벨에서 활성 이벤트 보기
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+알림 벨(image:../media/notification_bell.png[""] ) 메뉴 표시줄에서 Unified Manager가 추적하는 가장 중요한 활성 이벤트를 빠르게 볼 수 있는 방법을 제공합니다.
+
+활성 이벤트 목록은 모든 클러스터에서 발생한 중요, 오류, 경고 및 업그레이드 이벤트의 총 수를 확인하는 방법을 제공합니다.  이 목록에는 지난 7일간의 이벤트가 포함되어 있으며, 정보 이벤트는 포함되어 있지 않습니다.  가장 관심 있는 이벤트 목록을 표시하려면 링크를 클릭하세요.
+
+클러스터에 접근할 수 없는 경우 Unified Manager는 이 페이지에 해당 정보를 표시합니다.  *세부정보* 버튼을 클릭하면 접근할 수 없는 클러스터에 대한 자세한 정보를 볼 수 있습니다.  이 작업을 수행하면 이벤트 세부 정보 페이지가 열립니다.  관리 스테이션의 공간이나 RAM 부족 등의 규모 모니터링 문제도 이 페이지에 표시됩니다.
+
+.단계
+. 메뉴바에서 클릭하세요image:../media/notification_bell.png[""] .
+. 활성 이벤트에 대한 세부 정보를 보려면 "수용 인원 2명" 또는 "성능 4명"과 같은 이벤트 텍스트 링크를 클릭하세요.
+

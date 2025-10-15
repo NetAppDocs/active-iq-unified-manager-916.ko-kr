@@ -1,0 +1,20 @@
+---
+permalink: reporting/concept_schedule_reports.html 
+sidebar: sidebar 
+keywords: scheduling, reports 
+summary: 보고서로 재사용하고 공유하려는 뷰가 있으면 Active IQ Unified Manager 사용하여 일정을 예약할 수 있습니다.  예약된 보고서를 관리하고, 각 보고서 일정에 대한 수신자와 배포 빈도를 변경할 수 있습니다. 
+---
+= 일정 보고서
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+보고서로 재사용하고 공유하려는 뷰가 있으면 Active IQ Unified Manager 사용하여 일정을 예약할 수 있습니다.  예약된 보고서를 관리하고, 각 보고서 일정에 대한 수신자와 배포 빈도를 변경할 수 있습니다.
+
+Unified Manager에서 대부분의 뷰나 인벤토리 페이지를 예약할 수 있습니다.  예외는 이벤트입니다. 이벤트는 CSV 파일로 다운로드할 수 있는 보고서이지만 재생성 및 공유를 위해 이벤트를 예약할 수는 없습니다.  대시보드, 즐겨찾기 또는 구성 페이지를 다운로드하거나 예약할 수도 없습니다.
+
+Active IQ Unified Manager 9.8부터 Microsoft® Excel 형식으로 뷰를 다운로드하여 사용자 지정할 수 있습니다.  복잡한 정렬, 계층형 필터, 피벗 테이블, 차트 등 고급 Excel 기능을 사용할 수 있습니다.  만족스러운 Excel 보고서가 만들어지면 보고서를 예약하고 공유할 때마다 사용할 수 있도록 Excel 파일을 업로드할 수 있습니다.
+
+기본 제공 뷰나 사용자 정의 뷰를 예약할 수 있습니다.  CSV, PDF 또는 XSLX 중에서 보낼 파일 형식을 선택할 수 있습니다.  처음으로 보고서를 예약할 때 보고서를 다운로드하고 해당 보고서를 볼 수 있는 유일한 수신자로 자신을 지정할 수 있습니다. 그러면 다른 수신자들도 보고서를 볼 수 있습니다.

@@ -1,0 +1,275 @@
+---
+permalink: install-linux/reference_protocol_and_port_requirements.html 
+sidebar: sidebar 
+keywords: unified manager, port, requirements, protocol, server 
+summary: 필요한 포트와 프로토콜은 Unified Manager 서버와 관리되는 스토리지 시스템, 서버 및 기타 구성 요소 간의 통신을 가능하게 합니다. 
+---
+= 프로토콜 및 포트 요구 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+필요한 포트와 프로토콜은 Unified Manager 서버와 관리되는 스토리지 시스템, 서버 및 기타 구성 요소 간의 통신을 가능하게 합니다.
+
+
+
+== Unified Manager 서버에 대한 연결
+
+일반적인 설치에서는 Unified Manager 웹 UI에 연결할 때 포트 번호를 지정할 필요가 없습니다. 기본 포트가 항상 사용되기 때문입니다.  예를 들어 Unified Manager는 항상 기본 포트에서 실행하려고 하기 때문에 다음을 입력할 수 있습니다. `+https://<host>+` 대신에 `+https://<host>:443+` .
+
+Unified Manager 서버는 다음 인터페이스에 액세스하기 위해 특정 프로토콜을 사용합니다.
+
+[cols="4*"]
+|===
+| 인터페이스 | 규약 | 포트 | 설명 
+
+
+ a| 
+Unified Manager 웹 UI
+ a| 
+HTTP
+ a| 
+80
+ a| 
+Unified Manager 웹 UI에 액세스하는 데 사용되며, 자동으로 보안 포트 443으로 리디렉션됩니다.
+
+
+
+ a| 
+API를 사용한 Unified Manager 웹 UI 및 프로그램
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Unified Manager 웹 UI에 안전하게 액세스하거나 API 호출을 하는 데 사용됩니다. API 호출은 HTTPS를 사용해서만 이루어질 수 있습니다.
+
+
+
+ a| 
+유지 관리 콘솔
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+유지 관리 콘솔에 액세스하고 지원 번들을 검색하는 데 사용됩니다.
+
+
+
+ a| 
+리눅스 명령줄
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Red Hat Enterprise Linux 명령줄에 액세스하고 지원 번들을 검색하는 데 사용됩니다.
+
+
+
+ a| 
+MySQL 데이터베이스
+ a| 
+MySQL
+ a| 
+3306
+ a| 
+Unified Manager에 대한 OnCommand Workflow Automation 및 OnCommand API 서비스 액세스를 활성화하는 데 사용됩니다.
+
+
+
+ a| 
+시스템 로그
+ a| 
+UDP
+ a| 
+514
+ a| 
+ONTAP 시스템에서 구독 기반 EMS 메시지에 액세스하고 메시지를 기반으로 이벤트를 생성하는 데 사용됩니다.
+
+
+
+ a| 
+나머지
+ a| 
+HTTPS
+ a| 
+9443
+ a| 
+인증된 ONTAP 시스템에서 실시간 REST API 기반 EMS 이벤트에 액세스하는 데 사용됩니다.
+
+
+
+ a| 
+MySQL 데이터베이스
+ a| 
+MySQL
+ a| 
+3306
+ a| 
+Unified Manager에 대한 OnCommand Workflow Automation 및 OnCommand API 서비스 액세스를 활성화하는 데 사용됩니다.
+
+
+
+ a| 
+AMQP QPID 브로커
+ a| 
+TCP/IP
+ a| 
+56072
+ a| 
+내부 메시지 통신에 사용됩니다.
+
+
+
+ a| 
+AMQP QPID 브로커
+ a| 
+TCP를 통한 웹소켓
+ a| 
+56080
+ a| 
+ONTAP (클라우드 에이전트)에서 수신된 메시지를 이 포트에서 수신하는 데 사용됩니다.
+
+
+
+ a| 
+AMQP QPID 브로커
+ a| 
+TCP를 통한 웹소켓
+ a| 
+56443
+ a| 
+ONTAP (클라우드 에이전트)에서 수신된 메시지를 이 포트에서 수신하는 데 사용됩니다.  이 포트를 통한 통신은 TLS 또는 SSL에서 제공하는 암호화를 지원합니다.
+
+|===
+[NOTE]
+====
+Linux 시스템에 Unified Manager를 설치하는 동안 MySQL의 기본 포트인 3306은 localhost로만 제한됩니다.  이는 이전 구성이 유지되는 모든 업그레이드 시나리오에 영향을 미치지 않습니다.  이 구성은 수정될 수 있으며 다음을 사용하여 다른 호스트에서 연결을 사용할 수 있습니다. `Control access to MySQL port 3306` 유지 관리 콘솔의 옵션입니다.  자세한 내용은 다음을 참조하세요.link:../config/reference_additional_menu_options.html["추가 메뉴 옵션"] .  HTTP 및 HTTPS 통신에 사용되는 포트(포트 80 및 443)는 Unified Manager 유지 관리 콘솔을 사용하여 변경할 수 있습니다. 자세한 내용은 다음을 참조하세요. link:../config/concept_maintenance_console_menu.html["유지 관리 콘솔 메뉴"].
+
+====
+
+
+== Unified Manager 서버에서의 연결
+
+Unified Manager 서버와 관리형 스토리지 시스템, 서버 및 기타 구성 요소 간의 통신을 가능하게 하는 포트를 열도록 방화벽을 구성해야 합니다.  포트가 열려 있지 않으면 통신이 실패합니다.
+
+환경에 따라 Unified Manager 서버가 특정 대상에 연결하는 데 사용하는 포트와 프로토콜을 수정할 수 있습니다.
+
+Unified Manager 서버는 다음 프로토콜과 포트를 사용하여 관리되는 스토리지 시스템, 서버 및 기타 구성 요소에 연결합니다.
+
+[cols="4*"]
+|===
+| 목적지 | 규약 | 포트 | 설명 
+
+
+ a| 
+저장 시스템
+ a| 
+HTTPS
+ a| 
+443/TCP
+ a| 
+저장 시스템을 모니터링하고 관리하는 데 사용됩니다.
+
+
+
+ a| 
+저장 시스템
+ a| 
+NDMP
+ a| 
+10000/TCP
+ a| 
+특정 스냅샷 복원 작업에 사용됩니다.
+
+
+
+ a| 
+AutoSupport 서버
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+AutoSupport 정보를 전송하는 데 사용됩니다.  이 기능을 수행하려면 인터넷 접속이 필요합니다.
+
+
+
+ a| 
+인증 서버
+ a| 
+LDAP
+ a| 
+389
+ a| 
+인증 요청, 사용자 및 그룹 조회 요청을 하는 데 사용됩니다.
+
+
+
+ a| 
+LDAPS
+ a| 
+636
+ a| 
+보안 LDAP 통신에 사용됩니다.
+
+
+
+ a| 
+메일 서버
+ a| 
+SMTP
+ a| 
+25
+ a| 
+경고 알림 이메일을 보내는 데 사용됩니다.
+
+
+
+ a| 
+SNMP 트랩 발신자
+ a| 
+SNMPv1 또는 SNMPv3
+ a| 
+162/UDP
+ a| 
+SNMP 트랩에 대한 경고 알림을 보내는 데 사용됩니다.
+
+
+
+ a| 
+외부 데이터 공급자 서버
+ a| 
+TCP
+ a| 
+2003
+ a| 
+Graphite와 같은 외부 데이터 공급자에게 성능 데이터를 전송하는 데 사용됩니다.
+
+
+
+ a| 
+NTP 서버
+ a| 
+엔티피
+ a| 
+123/UDP
+ a| 
+Unified Manager 서버의 시간을 외부 NTP 시간 서버와 동기화하는 데 사용됩니다.  (VMware 시스템에만 해당)
+
+
+
+ a| 
+시스템 로그
+ a| 
+UDP
+ a| 
+514
+ a| 
+Unified Manager에서 감사 로그를 원격 Syslog 서버로 보내는 데 사용됩니다.
+
+|===
