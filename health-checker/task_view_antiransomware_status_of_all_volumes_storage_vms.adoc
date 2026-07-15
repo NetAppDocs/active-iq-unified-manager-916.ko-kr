@@ -20,6 +20,7 @@ summary: 모든 볼륨과 스토리지 VM 및 현재 랜섬웨어 방지 상태 
 
 
 
+[[view-security-details-of-all-volumes-with-anti-ransomware-detection]]
 == 랜섬웨어 탐지 기능으로 모든 볼륨의 보안 세부 정보 보기
 
 .단계
@@ -33,6 +34,7 @@ NOTE: 랜섬웨어 방지 기능은 오프라인 볼륨, 제한된 볼륨, SnapL
 
 
 
+[[view-security-details-of-all-storage-vms-with-anti-ransomware-detection]]
 == 랜섬웨어 감지 기능을 통해 모든 스토리지 VM의 보안 세부 정보를 확인하세요.
 
 .단계

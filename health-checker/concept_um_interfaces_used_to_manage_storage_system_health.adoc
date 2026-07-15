@@ -17,6 +17,7 @@ Unified Manager의 보호 기능을 사용하려면 OnCommand Workflow Automatio
 
 
 
+[[unified-manager-web-ui]]
 == Unified Manager 웹 UI
 
 Unified Manager 웹 UI를 사용하면 관리자가 데이터 저장 용량, 가용성 및 보호와 관련된 클러스터 문제를 모니터링하고 문제를 해결할 수 있습니다.
@@ -25,6 +26,7 @@ Unified Manager 웹 UI를 사용하면 관리자가 데이터 저장 용량, 가
 
 
 
+[[maintenance-console]]
 == 유지 관리 콘솔
 
 Unified Manager 유지 관리 콘솔을 사용하면 관리자는 Unified Manager 서버 자체와 관련된 운영 체제 문제, 버전 업그레이드 문제, 사용자 액세스 문제 및 네트워크 문제를 모니터링, 진단 및 해결할 수 있습니다.  Unified Manager 웹 UI를 사용할 수 없는 경우 유지 관리 콘솔을 통해서만 Unified Manager에 액세스할 수 있습니다.

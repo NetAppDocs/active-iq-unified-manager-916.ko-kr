@@ -3488,7 +3488,6 @@
   <block id="47a1bdec12f9908ef6c7d1f58fb4b4c5" category="inline-link-macro">새로운 Active IQ 규칙 파일 업로드</block>
   <block id="29c4d087728ce94ddf83b473dec84df3" category="paragraph">플랫폼 이벤트 활성화에 대한 자세한 내용은 다음을 참조하세요.<block ref="8658b0fde93c687ddd323db3f722b419" category="inline-link-macro-rx"></block> .  규칙 파일 업로드에 대한 자세한 내용은 다음을 참조하세요.<block ref="b01374e7e4b241354108fd5f79d4fe7d" category="inline-link-macro-rx"></block> .</block>
   <block id="9b2dd5f36ee111b85cbdd29e104e3e55" category="inline-link">NetApp Active IQ</block>
-  <block id="9d704a09e3781ec3b4883efbf66a03bc" category="paragraph">NetApp Active IQ 는 NetApp 하이브리드 클라우드 전반에서 스토리지 시스템 운영을 최적화하기 위해 예측 분석과 사전 지원을 제공하는 클라우드 기반 서비스입니다.  보다<block ref="598c2869fc03de80441fdb1c505b1b08" category="inline-link-rx"></block> 자세한 내용은.</block>
   <block id="e78be7c786a595ecf85d670520670e03" category="summary">이벤트는 지속적으로 발생하지만 Unified Manager는 이벤트가 지정된 필터 기준을 충족할 때만 알림을 생성합니다.  알림을 생성할 이벤트를 선택할 수 있습니다. 예를 들어, 공간 임계값을 초과하거나 개체가 오프라인이 되는 경우입니다.  알림이 발생할 때 실행되는 스크립트와 알림을 연결할 수도 있습니다.</block>
   <block id="5466ff3eb200eb7bcbb8dcc28afb32d8" category="doc">어떤 알림이 있나요?</block>
   <block id="6b98fdbcc4abfd91989145ab4a3794b3" category="paragraph">이벤트는 지속적으로 발생하지만 Unified Manager는 이벤트가 지정된 필터 기준을 충족할 때만 알림을 생성합니다.  알림을 생성할 이벤트를 선택할 수 있습니다. 예를 들어, 공간 임계값을 초과하거나 개체가 오프라인이 되는 경우입니다.  알림이 발생할 때 실행되는 스크립트와 알림을 연결할 수도 있습니다.</block>
@@ -7419,7 +7418,6 @@
   <block id="56bad51d0fd70713223e857396803caa" category="paragraph">Unified Manager는 메모리 용량이 적은 시스템에도 설치할 수 있지만, 권장하는 12GB RAM을 사용하면 최적의 성능을 위해 충분한 메모리를 확보할 수 있으며, 구성이 커짐에 따라 시스템이 추가 클러스터와 스토리지 개체를 수용할 수 있습니다.  Unified Manager가 배포된 VM에 메모리 제한을 설정해서는 안 되며, 소프트웨어가 시스템에 할당된 메모리를 활용하는 것을 방해하는 기능(예: 벌루닝)을 활성화해서는 안 됩니다.</block>
   <block id="118be0e1a3c862556b2a6426bdcd24de" category="paragraph">또한 Unified Manager의 두 번째 인스턴스를 설치하기 전에 Unified Manager의 단일 인스턴스가 모니터링할 수 있는 노드 수에는 제한이 있습니다.  자세한 내용은 _모범 사례 가이드_를 참조하세요.</block>
   <block id="9650789293045a87cc14a47729b5ebfc" category="inline-link">기술 보고서 4621: Unified Manager 모범 사례 가이드</block>
-  <block id="ee26087a8b7ec790988603a3298c45f3" category="paragraph"><block ref="ee26087a8b7ec790988603a3298c45f3" category="inline-link-rx"></block></block>
   <block id="ccd350b03208f21a01e8434aa29bf22c" category="paragraph">메모리 페이지 스와핑은 시스템과 관리 애플리케이션의 성능에 부정적인 영향을 미칩니다.  전반적인 호스트 활용으로 인해 사용할 수 없는 CPU 리소스를 놓고 경쟁하면 성능이 저하될 수 있습니다.</block>
   <block id="eeedd0b411cf8b8d426d2fb1abee2797" category="section-title">전용 사용에 대한 요구 사항</block>
   <block id="c74cdaf0de603354b9d68a1b99f50e57" category="paragraph">Unified Manager를 설치하는 물리적 또는 가상 시스템은 Unified Manager에만 사용해야 하며 다른 애플리케이션과 공유해서는 안 됩니다.  다른 애플리케이션이 시스템 리소스를 소모하여 Unified Manager의 성능을 크게 저하시킬 수 있습니다.</block>
@@ -7919,7 +7917,6 @@
   <block id="a9b0dbc9157d19751650d85b8273cae0" category="list-text">5GB(씬 프로비저닝)</block>
   <block id="cb38ac590299a4579591b8687141d05e" category="list-text">152GB(두꺼운 프로비저닝)</block>
   <block id="16cb709111f75691259b4300511c4561" category="inline-link-macro">Unified Manager 모범 사례 가이드</block>
-  <block id="b1ef1e646481ec8adc66cc5d2b2018ba" category="paragraph">또한 Unified Manager의 두 번째 인스턴스를 설치하기 전에 Unified Manager의 단일 인스턴스가 모니터링할 수 있는 노드 수에는 제한이 있습니다. 자세한 내용은 다음을 참조하세요. <block ref="30a299cd9b89fb73ae0b956f3afc43ad" category="inline-link-macro-rx"></block>.</block>
   <block id="32e5c16a2c1109e106990eafe2e5051a" category="summary">VMWare vSphere 플랫폼의 Unified Manager에 대한 빠른 시작 가이드입니다.</block>
   <block id="6e9d444f5a98d00ae31eff389dc819fa" category="doc">VMware 설치를 위한 빠른 시작 지침</block>
   <block id="d92bb0fdb003a277ed75c5c3745b9f31" category="paragraph">다운로드할 수 있습니다<block ref="58963a595c988dc6f693cb3238dc907a" prefix=" " category="inline-code"></block> 루트 인증서가 포함된 파일<block ref="c47c7c7383225ab55ff591cb59c41e6b" prefix=" " category="inline-code"></block> 파일 및<block ref="586ba478b7ebec665f3df120799b6c2e" prefix=" " category="inline-code"></block> 파일을 만들고 Unified Manager를 가상 어플라이언스로 배포합니다.</block>
@@ -12060,4 +12057,7 @@
   <block id="94d13f29f9fba88b1b0d477b50fbcb23" category="paragraph">"`WFA pack for managing Clustered Data ONTAP`"은 WFA 5.1.1P6에 포함되어 있으므로 이전처럼 NetAppStorage Automation Store에서 이 팩을 다운로드하여 WFA 서버에 별도로 설치할 필요가 없습니다.<block ref="205df40c4c09810da80912824982d64d" category="inline-link-rx"></block></block>
   <block id="b51ca7d8abeeddcb10f579ebf26d482d" category="paragraph"><block ref="b51ca7d8abeeddcb10f579ebf26d482d" category="inline-link-rx"></block></block>
   <block id="beaebf17f78286bd5f1e620cf360cf26" category="admonition">파일을 다운로드하려면 Oracle 계정이 필요합니다. Oracle 계정이 없으시면 <block ref="55cce93bb9914d623967628ae7efe815" category="inline-link-macro-rx"></block> 페이지로 이동하여 계정을 생성하십시오.</block>
+  <block id="2adbe8bdce2f61c208adbcdcc37e0d1e" category="paragraph">NetApp Active IQ는 NetApp 하이브리드 클라우드 전반에 걸쳐 스토리지 시스템 운영을 최적화하기 위해 예측 분석 및 사전 예방적 지원을 제공하는 클라우드 기반 서비스입니다. 자세한 내용은<block ref="0e9077c60daec97818e84f64654ad149" category="inline-link-rx"></block>을 참조하십시오.</block>
+  <block id="34d3c2d39d6d85670998be5649271fee" category="paragraph"><block ref="34d3c2d39d6d85670998be5649271fee" category="inline-link-rx"></block></block>
+  <block id="44147a2c9ef6251f322e3e18dbdf97ed" category="paragraph">또한 Unified Manager의 두 번째 인스턴스를 설치하기 전에 단일 Unified Manager 인스턴스가 모니터링할 수 있는 노드 수에는 제한이 있습니다. 자세한 내용은 <block ref="2c5cc47a014185f968ab45db0b0eacd1" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
 </blocks>

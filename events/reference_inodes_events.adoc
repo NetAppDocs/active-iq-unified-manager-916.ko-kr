@@ -15,6 +15,7 @@ Inode 이벤트는 Inode가 가득 찼거나 거의 가득 찼을 때 정보를 
 
 
 
+[[impact-area-capacity]]
 == 영향 영역: 용량
 
 |===

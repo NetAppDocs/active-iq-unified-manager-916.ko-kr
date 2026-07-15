@@ -15,6 +15,7 @@ summary: 사용자 및 그룹 할당량 이벤트는 사용자 및 사용자 그
 
 
 
+[[impact-area-capacity]]
 == 영향 영역: 용량
 
 |===

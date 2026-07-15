@@ -15,6 +15,7 @@ summary: '네트워크 인터페이스 이벤트는 네트워크 인터페이스
 
 
 
+[[impact-area-availability]]
 == 영향 영역: 가용성
 
 |===
@@ -66,6 +67,7 @@ FC/FCoE 네트워크 인터페이스 상태 다운(ocumEvtFCLifStatusDown)
 |===
 
 
+[[impact-area-configuration]]
 == 영향 영역: 구성
 
 |===
@@ -84,6 +86,7 @@ FC/FCoE 네트워크 인터페이스 상태 다운(ocumEvtFCLifStatusDown)
 |===
 
 
+[[impact-area-performance]]
 == 영향 영역: 성능
 
 |===

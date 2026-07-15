@@ -43,6 +43,7 @@ image::../media/vm_workflow.gif[VM 워크플로]
 
 
 
+[[what-is-not-supported]]
 == 지원되지 않는 사항
 
 * ONTAP 외부에 있고 vCenter Server 인스턴스에 매핑된 데이터스토어는 Unified Manager에서 지원되지 않습니다.  해당 데이터스토어에 가상 디스크가 있는 VM도 지원되지 않습니다.

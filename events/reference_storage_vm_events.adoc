@@ -17,6 +17,7 @@ summary: '저장소 VM 이벤트는 저장소 VM(SVM)의 상태에 대한 정보
 
 
 
+[[impact-area-availability]]
 == 영향 영역: 가용성
 
 |===
@@ -255,6 +256,7 @@ AV 서버에서 발견된 바이러스 *(nbladeVscanVirusDetected)
 |===
 
 
+[[impact-area-configuration]]
 == 영향 영역: 구성
 
 |===
@@ -295,6 +297,7 @@ SVM 이름 변경됨(해당 없음)
 |===
 
 
+[[impact-area-performance]]
 == 영향 영역: 성능
 
 |===
@@ -368,6 +371,7 @@ SVM 지연 경고 임계값 위반(ocumSvmLatencyWarning)
 |===
 
 
+[[impact-area-security]]
 == 영향 영역: 보안
 
 |===
